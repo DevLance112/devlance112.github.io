@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Fots -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Remixicon Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Remixicon Icon -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Main CSS -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+
+    <title>Webcrawler Indexer Ranker SearchEngine</title>
+    <style>
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+
+<!-- header -->
+<header class="ds-header" id="site-header">
+    <div class="container">
+        <div class="ds-header-inner">
+            <!-- logo -->
+            <a href="index.html" class="ds-logo">
+                <span>L</span>Lance Li
+            </a>
+            <!-- logo -->
+            <!-- social -->
+            <ul class="ds-social">
+                <li><a href="https://github.com/SirRizzalot" target="_blank"><i class="ri-github-fill"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/lance-li-3158aa142/" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
+            </ul>
+            <!-- social -->
+        </div>
+    </div>
+    <style>
+        a {
+            color: blue;
+            text-underline:blue;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+    </style>
+</header>
+<!-- header -->
+   
+   <main class="ds-main-section">
+     <div class="container">
+        <div class="ds-work-details-section">
+            <div class="text-center">
+              <a href="index.html" class="ds-button ds-arrow-button"><i class="ri-arrow-left-s-line"></i> BAck</a>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
+                  <header class="ds-work-det-hed">
+                      <h1 class="ds-work-det-title">Movie Browsing Website</h1>
+                      <span class="ds-work-det-dep">Mobile development - 2019</span>
+                  </header>
+                  <figure><img src="assets/images/WebCrawler-Indexer-Ranker.JPG"></figure>
+                  <div class="ds-work-content-sec">
+                      <div class="row justify-content-center">
+                          <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                              <p>This academic project is created from scratch within a 6-week period alongside with the Movie Browsing Website Project. This project is complete in collaboration with <a href="https://www.linkedin.com/in/anthony-wen-a05656210/">Anthony Wen</a>, <a href="https://www.linkedin.com/in/van-pham-22202319a/">Van Pham</a>, and <a href="https://www.linkedin.com/in/aileen-tran-1b91a2262/"> Aileen Tran</a> under guidance of <a href="https://isr.uci.edu/users/alberto-krone-martins"> Professor Alberto Krone-Martins</a>. </p>
+
+                              <p>In this project we first built a webcrawler to scrape a running server containing historical copy of the entire uci network(not real time website and servers since there are many team running the crawler and may lead to crashing websites for other students). After a successful run(that had proper crawler politeness and a high coverage of the entire network), we moved on to building a search engine that finds related links to search input filtered by a ranker.</p>
+
+                              <h2>Webcrawler</h2>
+                              <p>To start we were given 4 domain links and stay on the 4 domains. We designed a scraper that looks into each link, gets a response, and find all hyperlinks embedded in the response and added into our frontier. For each response, we find all the words in the website content and record the frequency of each word. The scraper will continue whatever is next in the frontier until it is empty. Ultimately reporting total unique pages and total valid urls found, the longest page in terms of number of unique words, 50 most common words considering numbers as words based on our tokenizer, 50 most common words not considering numbers as words, and 126 subdomains were found in the ics.uci.edu domain with the number of
+                                  respective pages in that subdomain. Very simple but there are some key designs that we implemented to optimize the performance and reduce errors:</p>
+
+                              <ul>
+                                  <li>Robot politeness designed to ensure that the domains allows robots. Implemented through checking the robot.txt file if exists. We also stored the disallowed paths in real time since we didn't expect it to be many and improve efficienty. </li>
+                                  <li>Status Code separation designed to tackle specifically 200s and 300s while ignoring the others. 300s are redirects which we look into what the final destination is and add to the frontier if it is valid. For 200s, we perform the normal operations. </li>
+                                  <li>Similarity detected designed to avoid parsing of similar websites. Our approach was to use a three-gram finger-print method to detect similarity. Three gram is achieved making groups of each word and the next two words after it. To filter the amount of data to process, we find the sum of the unicode of each word in a group and keep only those who has a modularity of 0 when compared to 4 and 5. The similarity is compared with previous websites through intersection / union, which if it is the same then would result in 1. At a similarity 1 with any previous website, we cut the process for this url and proceed with the next.</li>
+                                  <li>Url Validity Inspection through regex matching of the url. To account for real time changes of the websites, we also checked if the url was previously parsed. To ensure no malware infinity loops. </li>
+                              </ul>
+                              <h2>Indexer and Ranker</h2>
+                              <p>To ensure every group starts on the same page(some group never finished their crawler), Professor Martins gave out a set of xml data containing urls and their website responses. However, it wouldn't be difficult to modify the previous code to get data in the same format. A difficult part of this project is to use local file storage for processed data instead of using databases(no MySQL). With these restrictions, we build indexers to process all the xml data and store the processed data, an optimal retriever of the data, and a ranker that sorts all urls to find the best matching urls upon search requests.</p>
+                              <h3>Indexer</h3>
+                              <ul>
+                                  <li>Utilized the same word indexing method as the webcrawler.</li>
+                                  <li>Stored information in an inverted index with words mapping a set of {url_ids, additional information}. This information is stored into a document but is not loaded entirely because it is too big to load into memory. </li>
+                                  <li>Indexed each word with their respective byte position in the inverted index. This allows us to load it in memory and access it in O(1) times.</li>
+                                  <li>Used Url_ids to differentiate different urls, saving space. This information is stored into a document and is entirely loaded into memory since it is small.</li>
+                                  <li>Improved with a tf-idf inverted index where words mapping a set of {url_ids, their tf-idf} with values obtained from the original inverted index</li>
+                              </ul>
+                              <h3>Ranker</h3>
+                              <ul>
+                                  <li>the tf-idf calculation was done using the following formula where info[1] is # of regular word frequency, info[2] is # of special (fonted) word frequency, info[3] is total # of regular word frequency: <img src="assets/images/tf-idf%20visualization.JPG"> I designed the TF portion to account for the importance of ratio of frequency / total # of words but used log to have a regularized importance. Additionally, I designed the IDF portion to focus the impact of documents with rare words but used log to reduce the significance of overly high ratios.</li>
+                                  <li>Ranker Compared Cosine similarity between the tf-idf of each url and the query.<img src="assets/images/Cosine-Similarity-Visulization.JPG"></li>
+                                  <li>We added additional weights like special Character frequency to increase the importance of documents with special Characters.</li>
+                                  <li>Lastly we return the top 5 scored urls.</li>
+                              </ul>
+                              <p>We optimized the system to perform all search within 100ms which significantly improves user experience.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+     </div>
+   </main>
+
+<!--  footer -->
+<footer class="ds-footer text-center">
+    <div class="container">
+        <section>
+            <span>Stay in touch</span>
+            <h4>Ready to talk?</h4>
+            <p>Feel free to contact me</p>
+            <button id="copyEmailButton" class="ds-button" onclick="copyEmail()">Lets Talk</button>
+        </section>
+        <span class="ds-copyright">© 2022 All rights reserved. <a target="_blank" href="http://www.mobanwang.com/" title="网页模板">网页模板</a>.</span>
+    </div>
+</footer>
+
+
+<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+-->
+<script src="assets/js/main.js"></script>
+<script>
+    function copyEmail() {
+        const tempInput = document.createElement('input');
+        tempInput.value = 'lanceprofe@gmail.com';
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+        const button = document.getElementById('copyEmailButton');
+        button.textContent = 'Shoot me an email, I copied it for ya!';
+    }
+</script>
+</body>
+</html>

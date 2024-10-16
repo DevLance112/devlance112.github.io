@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Google Fots -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+      <!-- Remixicon Icon -->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+      <!-- Remixicon Icon -->
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <!-- Main CSS -->
+      <link href="assets/css/main.css" rel="stylesheet">
+
+
+    <title>Movie Browsing Website</title>
+      <style>
+          img {
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+          }
+      </style>
+  </head>
+  <body>
+   
+    <!-- header -->
+    <header class="ds-header" id="site-header">
+        <div class="container">
+            <div class="ds-header-inner">
+              <!-- logo -->
+              <a href="index.html" class="ds-logo">
+                <span>L</span>Lance Li
+              </a>
+              <!-- logo -->
+              <!-- social -->
+              <ul class="ds-social">
+                <li><a href="https://github.com/SirRizzalot" target="_blank"><i class="ri-github-fill"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/lance-li-3158aa142/" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
+              </ul>
+              <!-- social -->
+            </div>
+        </div>
+        <style>
+            a {
+                color: blue;
+                text-underline:blue;
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+        </style>
+    </header>
+    <!-- header -->
+   
+   <main class="ds-main-section">
+     <div class="container">
+        <div class="ds-work-details-section">
+            <div class="text-center">
+              <a href="index.html" class="ds-button ds-arrow-button"><i class="ri-arrow-left-s-line"></i> BAck</a>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
+                  <header class="ds-work-det-hed">
+                      <h1 class="ds-work-det-title">Movie Browsing Website</h1>
+                      <span class="ds-work-det-dep">Website full stack - 2023</span>
+                  </header>
+                  <figure><img src="assets/images/frontPage.png"></figure>
+                  <div class="ds-work-content-sec">
+                      <div class="row justify-content-center">
+                          <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                              <p>Throughout a six-week development cycle, I created an optimized servlet architecture website for movie browsing through collaboration with my classmate <a href="https://www.linkedin.com/in/anthony-wen-a05656210/">Anthony Wen</a> and guided by <a href="https://chenli.ics.uci.edu/">Professor Chen Li</a> of Department of Computer Science . </p>
+
+                              <p>In this project I was able to apply many website servicing techniques taught by the course of COMPSCI 122B, DATA&WEB APPS.</p>
+
+                              <h2>Key implementations</h2>
+
+                              <ul>
+                                <li>Setting up a cloud machine( AWS instance ) to host website, including installation of Tomcat, Java and MySQL.</li>
+                                 <li>Batch insert of Dataset into MySQl(Movie data, user data, movie stars data.) </li>
+                                  <li>Applied encryption for account password using Javsypt encryption. Implemented reCAPTCHA authentication to protect spams. Https protocol. </li>
+                                 <li>Seperated ecosystem design with servlet API hosted on Tomcat and Website(html and javascript) access information through API request.</li>
+                                  <li>Converted servlets APIs that requires sensitive information to doPost request to avoid inject attacks.  </li>
+                                  <li>Included Dom and Sax parsers to read xml data and insert into the database. </li>
+                                  <li>kept a session and sticky cookies to allow for seamless interactions between websites and tabs aiming for a better user experience.</li>
+                              </ul>
+
+                              <h2>Optimization Technique applied</h2>
+                              <ul>
+                                  <li>Used PreparedStatement to speed up repeating MySQL requests.</li>
+                                  <li>Optimized Website Traffic through connection pooling, master and slave architecture. Tested with both AWS and Google Cloud, Cloud was faster for this scenario.</li>
+                                  <li>Implemented fuzzy search by updating table elements with FULLTEXT attributes</li>
+
+                              </ul>
+
+                              <h2>Additional features</h2>
+                              <ul>
+                                  <li>Android App that is a simplified version of the website retaining key features such as login and fuzzy search.</li>
+                              </ul>
+
+                          </div>
+                      </div>
+                  </div>
+                 <figure><img src="assets/images/webisteMobileApp.JPG" style="width: 50%;height: 50%"></figure>
+                  <div class="ds-work-content-sec">
+                      <div class="row justify-content-center">
+                          <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                              <h2>Current Situation</h2>
+                              <p>The current set up is linked to old AWS Instances that I deleted to avoid charges from AWS. If needed I can reset up the service and have everything operational.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+     </div>
+   </main>
+
+    <!--  footer -->
+    <footer class="ds-footer text-center">
+        <div class="container">
+            <section>
+                <span>Stay in touch</span>
+                <h4>Ready to talk?</h4>
+                <p>Feel free to contact me</p>
+                <button id="copyEmailButton" class="ds-button" onclick="copyEmail()">Lets Talk</button>
+            </section>
+            <span class="ds-copyright">© 2022 All rights reserved. <a target="_blank" href="http://www.mobanwang.com/" title="网页模板">网页模板</a>.</span>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        function copyEmail() {
+            const tempInput = document.createElement('input');
+            tempInput.value = 'lanceprofe@gmail.com';
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            const button = document.getElementById('copyEmailButton');
+            button.textContent = 'Shoot me an email, I copied it for ya!';
+        }
+    </script>
+  </body>
+</html>
