@@ -67,51 +67,59 @@
             <div class="row justify-content-center">
               <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
                   <header class="ds-work-det-hed">
-                      <h1 class="ds-work-det-title">Movie Browsing Website</h1>
-                      <span class="ds-work-det-dep">Website full stack - 2023</span>
+                      <h1 class="ds-work-det-title">ORC and translate</h1>
+                      <span class="ds-work-det-dep">img to text and translation service - 2024</span>
                   </header>
-                  <figure><img src="assets/images/frontPage.png"></figure>
+                  <figure><img src="assets/images/ORC%20and%20translate-web.PNG"></figure>
+
                   <div class="ds-work-content-sec">
                       <div class="row justify-content-center">
                           <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
-                              <p>Throughout a six-week development cycle, I created an optimized servlet architecture website for movie browsing through collaboration with my classmate <a href="https://www.linkedin.com/in/anthony-wen-a05656210/">Anthony Wen</a> and guided by <a href="https://chenli.ics.uci.edu/">Professor Chen Li</a> of Department of Computer Science . </p>
+                              <p>This project focuses on building a web application that allows users to upload an image, extract its text using Optical Character Recognition (OCR), and translate the extracted text into a selected language. The purpose of the application is to provide a user-friendly tool for individuals who need to quickly translate text from images. The app ensures seamless operation by supporting multiple languages and displaying translations line-by-line for better readability.</p>
 
-                              <p>In this project I was able to apply many website servicing techniques taught by the course of COMPSCI 122B, DATA&WEB APPS.</p>
+                              <p>This project allowed me to gain hands-on experience with fast AI driven development and error/bug fixing on AI generated codes.</p>
+
+                              <h2>Technology</h2>
+                              <ul>
+                                  <li><b>Programming Language:</b> Python (Flask for the web framework)</li>
+                                  <li><b>Web Framework:</b> Flask – lightweight and suitable for small web applications.</li>
+                                  <li><b>OCR Library:</b> Tesseract-OCR – open-source library for text extraction from images.</li>
+                                  <li><b>Translation API:</b> googletrans library for accessing Google Translate's services.</li>
+                                  <li><b>Frontend Technologies:</b> HTML5, CSS3, and JavaScript for UI/UX.</li>
+                                  <li><b>Design Tool:</b> Bootstrap principles for responsive layout (custom CSS without using the Bootstrap library directly).</li>
+                                  <li><b>State Management:</b> Cookies for handling temporary data (no server-side storage).</li>
+                              </ul>
 
                               <h2>Key implementations</h2>
 
                               <ul>
-                                <li>Setting up a cloud machine( AWS instance ) to host website, including installation of Tomcat, Java and MySQL.</li>
-                                 <li>Batch insert of Dataset into MySQl(Movie data, user data, movie stars data.) </li>
-                                  <li>Applied encryption for account password using Javsypt encryption. Implemented reCAPTCHA authentication to protect spams. Https protocol. </li>
-                                 <li>Seperated ecosystem design with servlet API hosted on Tomcat and Website(html and javascript) access information through API request.</li>
-                                  <li>Converted servlets APIs that requires sensitive information to doPost request to avoid inject attacks.  </li>
-                                  <li>Included Dom and Sax parsers to read xml data and insert into the database. </li>
-                                  <li>kept a session and sticky cookies to allow for seamless interactions between websites and tabs aiming for a better user experience.</li>
+                                  <li><b>Image Upload and Preview:</b> Users upload an image that is displayed immediately to the left of the translation output.</li>
+                                  <li><b>OCR Text Extraction:</b>  The uploaded image is processed using the Tesseract-OCR library to extract text.</li>
+                                  <li><b>Translation Service:</b>  The extracted text is translated into the target language using the googletrans library.</li>
+                                  <li><b>Line-by-Line Display:</b>  The original and translated texts are displayed side-by-side in a tabular format for easy comparison.</li>
+                                  <li><b>Language Selection:</b>  Dropdowns are provided for source and target language selection, with simplified Chinese as the default target language.</li>
                               </ul>
 
-                              <h2>Optimization Technique applied</h2>
+                              <h2>Frontend Design Choices</h2>
                               <ul>
-                                  <li>Used PreparedStatement to speed up repeating MySQL requests.</li>
-                                  <li>Optimized Website Traffic through connection pooling, master and slave architecture. Tested with both AWS and Google Cloud, Cloud was faster for this scenario.</li>
-                                  <li>Implemented fuzzy search by updating table elements with FULLTEXT attributes</li>
-
+                                  <li><b>Minimalist Interface:</b>  The design avoids unnecessary complexity, focusing on core functionalities.</li>
+                                  <li><b>Mobile-Responsive Layout:</b>  CSS adjustments ensure the app looks good on both desktop and mobile devices, with flexible column stacking on smaller screens.</li>
+                                  <figure><img src="assets/images/ORC%20and%20translate-mobile.jpg" style="max-width: 50%; "></figure>
+                                  <li><b>Dropdowns for Language Selection:</b>  Dropdowns with reduced size and separators visually indicate the direction of translation.</li>
+                                  <li><b>Table for Line-by-Line Output:</b>  A table format was chosen to align original and translated text side by side, improving readability and user comprehension.</li>
                               </ul>
 
-                              <h2>Additional features</h2>
+                              <h2>Backend Design Choices
+                                  </h2>
                               <ul>
-                                  <li>Android App that is a simplified version of the website retaining key features such as login and fuzzy search.</li>
+                                  <li><b>Flask Framework:</b>  Chosen for its simplicity and lightweight nature, making it perfect for small projects.</li>
+                                  <li><b>No Server-Side Storage:</b>  Cookies are used to temporarily store data during the session, ensuring privacy and avoiding the need for databases. </li>
+                                  <li><b>Google Translate API:</b>  The googletrans library simplifies the interaction with translation services without requiring manual API management. </li>
+                                  <li><b>Error Handling:</b>  Basic error handling ensures users receive meaningful feedback if translation or file upload fails. </li>
+
                               </ul>
 
-                          </div>
-                      </div>
-                  </div>
-                 <figure><img src="assets/images/webisteMobileApp.JPG" style="width: 50%;height: 50%"></figure>
-                  <div class="ds-work-content-sec">
-                      <div class="row justify-content-center">
-                          <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
-                              <h2>Current Situation</h2>
-                              <p>The current set up is linked to old AWS Instances that I deleted to avoid charges from AWS. If needed I can reset up the service and have everything operational.</p>
+
                           </div>
                       </div>
                   </div>
