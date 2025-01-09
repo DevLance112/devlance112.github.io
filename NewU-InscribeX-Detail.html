@@ -95,11 +95,11 @@
                                     <!-- Personas and Scenarios Section -->
                                     <section id="personas">
                                         <h2>Personas/Scenarios</h2>
-                                        <p>Relevant links:</p>
                                         <ul>
                                             <li><a
                                                     href="https://www.figma.com/board/VQSBZs2T0rf5tJW7RI78qT/Untitled?t=pCLg4mDpZE9ePTsQ-1">Figma
                                                     Board</a></li>
+                                            <figure><img src="assets/images/NewU-InscribeX-img/image3.jpg"></figure>
                                         </ul>
                                     </section>
 
@@ -231,6 +231,8 @@
                                             <li>If the query is deemed inappropriate, the system notifies the user and
                                                 rejects the query.</li>
                                         </ul>
+                                        <figure><img src="assets/images/NewU-InscribeX-img/image14.png"></figure>
+
 
                                         <h3>Other Functional Requirements</h3>
                                         <ul>
@@ -277,7 +279,7 @@
                                     <section id="constraints">
                                         <h2>Constraints and Assumptions</h2>
                                         <ul>
-                                            <li>Firebase is now required for data storage. This decision stems from
+                                            <li><b>Firebase</b> is now required for data storage. This decision stems from
                                                 NewU's commitment to long-term use of Firebase despite its associated
                                                 costs.</li>
                                             <li>Typescript to JavaScript translation remains a key challenge due to the
@@ -293,7 +295,7 @@
                                                 understanding of the Avalanche API.</li>
                                             <li>All login and chat features are assumed to be centralized, despite
                                                 discussions around decentralization.</li>
-                                            <li>Chinese users will be able to access the app using a VPN, even though
+                                            <li><b>China</b> users will be able to access the app using a VPN, even though
                                                 Firebase is banned in China.</li>
                                             <li>Desktop Chrome is assumed to be the primary platform for users,
                                                 simplifying development and leveraging Chrome's extensive extensions.
@@ -311,26 +313,36 @@
                                             <li><strong>Home Page</strong>: Features a user-friendly interface that
                                                 highlights key functionalities, including navigation to the marketplace,
                                                 staking, and community chat.</li>
+                                            <figure><img src="assets/images/NewU-InscribeX-img/image20.png"></figure>
                                             <li><strong>Login Page</strong>: A secure page allowing users to connect
                                                 their wallets, which serves as the primary login method.</li>
+                                            <figure><img src="assets/images/NewU-InscribeX-img/image12.png"></figure>
                                             <li><strong>Chat Tab in Community Page</strong>: Displays the global chat by
                                                 default, with options to add friends, access private chats, and create
                                                 group chats.</li>
+                                            <figure><img src="assets/images/NewU-InscribeX-img/image24.png"></figure>
                                             <li><strong>Friend Tab in Community Page</strong>: Allows users to manage
                                                 their friend list, add new friends, and initiate private conversations.
                                             </li>
+                                            <figure><img src="assets/images/NewU-InscribeX-img/image18.png"></figure>
                                             <li><strong>Create Group Chat</strong>: Includes a popup interface for
                                                 selecting friends and naming the group chat.</li>
+                                            <figure><img src="assets/images/NewU-InscribeX-img/image15.png"></figure>
                                             <li><strong>User Profile Page</strong>: Enables users to view and edit their
                                                 username and profile picture.</li>
+                                            <figure><img src="assets/images/NewU-InscribeX-img/image21.png"></figure>
+                                            <figure><img src="assets/images/NewU-InscribeX-img/image22.png"></figure>
                                             <li><strong>Marketplace Page</strong>: Features item listings, search
                                                 functionality, and a detailed view of cryptocurrency tokens available
                                                 for purchase or bid.</li>
+                                            <figure><img src="assets/images/NewU-InscribeX-img/image11.png"></figure>
                                             <li><strong>Detailed Cryptocurrency Token Page</strong>: Provides
                                                 comprehensive information about a selected cryptocurrency token,
                                                 including price trends, bid options, and related transactions.</li>
+                                            <figure><img src="assets/images/NewU-InscribeX-img/image10.png"></figure>
                                             <li><strong>Bid Page</strong>: Dedicated page for submitting bids on
                                                 selected assets in the marketplace.</li>
+                                            <figure><img src="assets/images/NewU-InscribeX-img/image19.png"></figure>
                                         </ul>
                                         <p>Each design ensures intuitive navigation, accessibility, and usability across
                                             desktop and mobile platforms, adhering to the project's goals and
@@ -344,6 +356,7 @@
 
                                         <!-- UML Documentation -->
                                         <h3>UML Sequence Diagram</h3>
+                                        <figure><img src="assets/images/NewU-InscribeX-img/image25.png"></figure>
                                         <p>
                                             This UML sequence diagram describes the important use case of communicating
                                             with other users.
@@ -368,9 +381,11 @@
                                             up to allow direct and private communication with the other user.
                                             The user’s friend(s) are stored inside Firebase.
                                         </p>
+                                        <figure><img src="assets/images/NewU-InscribeX-img/image5.png"></figure>
 
                                         <!-- Database Documentation -->
                                         <h3>Database Design</h3>
+                                        <figure><img src="assets/images/NewU-InscribeX-img/image7.png"></figure>
                                         <p>
                                             The database is a NoSQL design with Google’s Firebase as our database.
                                             Firebase operates as a collection of documents,
@@ -381,8 +396,9 @@
                                             This characteristic helps for faster retrieval of data, which is one of the
                                             main reasons we chose this service as our database.
                                         </p>
+                                        <figure><img src="assets/images/NewU-InscribeX-img/image23.png"></figure>
                                         <p>
-                                            The users’ table is where we store our user information. In Firebase, new
+                                            The <b>users’</b> table is where we store our user information. In Firebase, new
                                             entries are generated as documents and are automatically given a
                                             self-generated unique document for identification.
                                             Normally this value has no meaningful purpose other than for identification,
@@ -416,8 +432,9 @@
                                             Currently, we’ve shifted towards finishing all the functionalities before
                                             coming back and optimizing with Redis.
                                         </p>
+                                        <figure><img src="assets/images/NewU-InscribeX-img/image16.png"></figure>
                                         <p>
-                                            The global table is where we store all the message information for global
+                                            The <b>global</b> table is where we store all the message information for global
                                             chats. Currently, we are only using one global chat,
                                             but we have a vision that as we include more types of assets/cryptocurrency
                                             on our subnet, every coin type will have its community global chat.
@@ -442,9 +459,29 @@
                                             In addition, it is also not realistic to implement until a cache system is
                                             set up where usernames and profile pictures are easily and cheaply acquired.
                                         </p>
+                                        <figure><img src="assets/images/NewU-InscribeX-img/image1.png"></figure>
+                                        <p>
+                                            Moving on to the <b>messages</b> table which is a placeholder for a message object, we can use it to further develop and brainstorm ideas for creating different types of chats. By default, the database has a single global chat to which everyone has access to. Each individual message object has a few key attributes that simplify development, with one of them being the user. The user attribute of the message class allows for the identification of the sender. This facilitates UI features such as displaying who sent the message, querying the user instance for things like the avatar and username to display, and, later on, the creation of a friends list for each user. Similar to the reasoning for keeping track of a username, we also store the wallet address associated with each message sent. This ensures that when creating relationships between users, there will always be a unique identifier to differentiate and verify security. Otherwise, if multiple people have the same username, we can not accurately determine which user they want to add friends with. Other attributes of the message class include text, which is the actual content of the message sent, timestamp, which is the time the message was sent, and id, allowing for the identification of malicious messages later on in development.
+                                        </p>
+                                        <figure><img src="assets/images/NewU-InscribeX-img/image2.png"></figure>
+                                        <p>For the <b>friendsList</b> table, there are two attributes each allowing for key functionalities related to different types of messaging and later on direct trading. The unique identifier is the walletAddress which relates a friendsList collection back to its respective user instance. The second attribute is the friend's walletAddress, which allows the identification of each friend within the list. This structure enables the system to efficiently manage and retrieve a user’s friends, facilitating the creation of private chats and enabling direct transactions between users. Each entry in the friendList table represents a unique relationship between the user and their friends, which provides a foundation for personalized communication and trading features. The user’s friendsList document is generated at their first login and the friendList field updates upon adding more users as friends.
+                                        </p>
+                                        <figure><img src="assets/images/NewU-InscribeX-img/image8.png"></figure>
+                                        <p>
+                                            Once the friendList table has been created, the user can now create their own chat room. This is related to the <b>individualChat</b> table. The chatID is generated through the combination of the walletAddress of users involved in a direct message. The messages here are stored in an array of message objects referenced through their unique associated id. Both of these design decisions allow for the messages to be managed more efficiently for both users. After this class, it will facilitate the development of features such as deleting or editing a message. Despite the name individualChat, an instance of this class would also store a userList which is an array of users. This allows the individualChat class to be reused for instances that require a group chat. However, where they differ is the creation of an instance of a groupChat instance. Individual documents are created upon friend adds, the chatID will also serve as the documentID since two unique values concatenated have a low chance of becoming non-unique. This means that a unique individual chat conversation is created whenever a new user is added as a friend. For future development, developers should look into valid walletAddress characters and find a character that walletAddress will not have and is accepted by Firebase as documentID and insert it in between the two walletAddress to ensure uniqueness.
+                                        </p>
+                                        <figure><img src="assets/images/NewU-InscribeX-img/image6.png"></figure>
+                                        <p>
+                                            The <b>groupChatList</b> table is designed to manage and organize group chats within the website’s Chat Page. Each entry in the table is linked to a specific user through their unique walletAddress, which serves as the primary identifier. This structure allows the system to efficiently track and manage the group chats for each individual user. Within the groupChatList table, the walletAddress attribute ties the back to the respective user instance in the users table. The groupChatList attribute is an array that holds multiple chatID values, each representing a unique group chat that the user is a member of. These chatID values are linked to the groupChat table, where each chatID corresponds to a specific group chat entry.
+                                        </p>
+                                        <figure><img src="assets/images/NewU-InscribeX-img/image4.png"></figure>
+                                        <p>
+                                            Lastly, the <b>groupChat</b> table is utilized to differentiate between a group chat and an individual chat. It includes attributes such as chatID, chatHistory, userList, and name. The chatID is a unique identifier for each group chat, generated through a library called UUID and a chatHistory attribute utilized similarly to individual chat. The charHistory is an array of message objects. Each message object contains details like the sender's walletAddress, the text of the message, the timestamp, the user, and unique message id.
+                                        </p>
 
                                         <!-- User Flow Documentation -->
                                         <h3>User Flow Diagram</h3>
+                                        <figure><img src="assets/images/NewU-InscribeX-img/image9.png"></figure>
                                         <p>
                                             The User Flow Diagram illustrates the navigation paths within an application
                                             starting from the initial page.
