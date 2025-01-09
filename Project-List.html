@@ -1,77 +1,217 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Google Fonts -->
+    <!-- Google Fots -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Remixicon Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Remixicon Icon -->
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Main CSS -->
     <link href="assets/css/main.css" rel="stylesheet">
-    <title>Projects - Lance Li</title>
+
+
+    <title>Lance's ePortfolio </title>
 </head>
+
 <body>
+
     <!-- header -->
     <header class="ds-header" id="site-header">
         <div class="container">
             <div class="ds-header-inner">
-              <a href="index.html" class="ds-logo">
-                <span>L</span>Lance Li
-              </a>
-              <ul class="ds-social">
-                <a href="index.html" class="ds-button">Back to Home</a>
-                <li><a href="https://github.com/DevLance112" target="_blank"><i class="ri-github-fill"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/lance-li-3158aa142/" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
-              </ul>
+                <!-- logo -->
+                <a href="index.html" class="ds-logo">
+                    <span>L</span>Lance Li
+                </a>
+                <!-- logo -->
+                <div class="ds-button-sec">
+
+                </div>
+                <!-- social -->
+                <ul class="ds-social">
+                    <a href="assets/files/Lance Li s Simplified Resume 1-7-2025 trimmed relevant coursework.pdf"
+                        class="ds-button">Download Resume</a>
+                    <li><a href="https://github.com/DevLance112" target="_blank"><i class="ri-github-fill"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/lance-li-3158aa142/" target="_blank"><i
+                                class="ri-linkedin-fill"></i></a></li>
+                </ul>
+                <!-- social -->
             </div>
         </div>
     </header>
 
-    <!--  Work -->
-    <div class="ds-work-section">
-        <div class="container">
-            <h2 class="ds-heading">All Projects</h2>
-            <div class="ds-work-list-section">
-                <!-- ORC and Translate -->
-                <div class="ds-work-list">
-                    <div class="row">
-                        <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
-                            <section>
-                                <h3 class="ds-work-tilte">ORC and Translate</h3>
-                                <p>Built a web app using Flask in under 4 hours to test the capabilities of AI-driven development. Integrated Tesseract-OCR for text extraction and Google Translate API for multilingual translation.</p>
-                                <h2 class="ds-heading">Technology</h2>
-                                <ul class="ds-skills-list">
-                                    <li>Python</li>
-                                    <li>HTML/CSS</li>
-                                    <li>JavaScript</li>
-                                    <li>AI driven</li>
-                                </ul>
-                                <a href="ORC%20and%20Translate.html" class="ds-button">Details</a>
-                            </section>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
-                            <figure><img src="assets/images/ORC%20and%20translate-mobile.jpg"></figure>
+    <div class="ds-banner">
+        <!--  Work -->
+        <div class="ds-work-section">
+            <div class="container">
+                <h2 class="ds-heading">All Projects</h2>
+                <div class="ds-work-list-section">
+                    <!-- AI Resume Builder -->
+                    <div class="ds-work-list">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
+                                <section>
+                                    <h3 class="ds-work-tilte">AI Resume Builder</h3>
+                                    <p>Developed an AI-powered resume builder platform focusing on job-specific resume
+                                        optimization and automated content generation. The platform features job
+                                        description parsing and fine-tuning of resumes to match job requirements, with
+                                        data stored in a PostgreSQL database managed through Strapi v5.</p>
+                                    <h2 class="ds-heading">Technology</h2>
+                                    <ul class="ds-skills-list">
+                                        <li>React</li>
+                                        <li>PostgreSQL</li>
+                                        <li>Strapi</li>
+                                        <li>AI Integration</li>
+                                    </ul>
+                                    <a href="AI-Resume-Builder-Detail.html" class="ds-button">Details</a>
+                                </section>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
+                                <figure><img src="assets/images/AI-Resume-Builder.jpg"></figure>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Add more projects following the same pattern -->
-                <!-- Movie Browsing Website -->
-                <div class="ds-work-list">
-                    <!-- Similar structure as above -->
-                </div>
+                    <!-- NewU InscribeX -->
+                    <div class="ds-work-list">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
+                                <section>
+                                    <h3 class="ds-work-tilte">NewU InscribeX</h3>
+                                    <p>Led the development of a web3-integrated website with advanced communication
+                                        features. Implemented secure user authentication via popular web3 wallets and
+                                        built a dynamic live chat system supporting one-on-one messaging, group chats,
+                                        and global communication.</p>
+                                    <h2 class="ds-heading">Technology</h2>
+                                    <ul class="ds-skills-list">
+                                        <li>Web3</li>
+                                        <li>Firebase</li>
+                                        <li>React</li>
+                                        <li>NoSQL</li>
+                                    </ul>
+                                    <a href="NewU-InscribeX-Detail.html" class="ds-button">Details</a>
+                                </section>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
+                                <figure><img src="assets/images/NewU-InscribeX.jpg"></figure>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ORC and Translate -->
+                    <div class="ds-work-list">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
+                                <section>
+                                    <h3 class="ds-work-tilte">ORC and Translate</h3>
+                                    <p>Built a web app using Flask in under 4 hours to test the capabilities of
+                                        AI-driven development. Integrated Tesseract-OCR for text extraction and Google
+                                        Translate API for multilingual translation.</p>
+                                    <h2 class="ds-heading">Technology</h2>
+                                    <ul class="ds-skills-list">
+                                        <li>Python</li>
+                                        <li>HTML/CSS</li>
+                                        <li>JavaScript</li>
+                                        <li>AI driven</li>
+                                    </ul>
+                                    <a href="ORC%20and%20Translate.html" class="ds-button">Details</a>
+                                </section>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
+                                <figure><img src="assets/images/ORC%20and%20translate-mobile.jpg"></figure>
+                            </div>
+                        </div>
+                    </div>
 
-                <!-- Webcrawler Project -->
-                <div class="ds-work-list">
-                    <!-- Similar structure as above -->
-                </div>
+                    <!-- Movie Browsing Website -->
+                    <div class="ds-work-list">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
+                                <section>
+                                    <h3 class="ds-work-tilte">Movie Browsing Website</h3>
+                                    <p>Utilized Tomcat to host a website containing 20,000+ movies with unique ID.
+                                        Stored information on an AWS instance with mySQL. Achieved consistent response
+                                        time of under 500ms while maintaining session through techniques such as
+                                        master-slave, load balancing, mySQl query optimization.</p>
+                                    <h2 class="ds-heading">Technology</h2>
+                                    <ul class="ds-skills-list">
+                                        <li>Java</li>
+                                        <li>Javascript</li>
+                                        <li>HTML</li>
+                                        <li>MySQL</li>
+                                        <li>Git</li>
+                                    </ul>
+                                    <a href="Movie-Browser-Detail.html" class="ds-button">Details</a>
+                                </section>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
+                                <figure><img src="assets/images/frontPage2.JPG"></figure>
+                            </div>
+                        </div>
+                    </div>
 
-                <!-- Pantry Pal -->
-                <div class="ds-work-list">
-                    <!-- Similar structure as above -->
+                    <!-- Webcrawler Project -->
+                    <div class="ds-work-list">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
+                                <section>
+                                    <h3 class="ds-work-tilte">Webcrawler, Indexer, Ranker, Search Engine</h3>
+                                    <p>Constructed a webcrawler from scratch. Crawled through the uci network with
+                                        safety measure such as politeness and continuation from unresponsive websites.
+                                        Processed the crawled data through an inverse index storing the word position by
+                                        byte location, allowing for O(1) times search. Ranked the websites through
+                                        tf-idf, cosine similarity, special character weight.</p>
+                                    <h2 class="ds-heading">Technology</h2>
+                                    <ul class="ds-skills-list">
+                                        <li>Python</li>
+                                    </ul>
+                                    <a href="Webcrawler-Indexer-Ranker-Project-Detail.html"
+                                        class="ds-button">Details</a>
+                                </section>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
+                                <figure><img src="assets/images/WebCrawler-Indexer-Ranker.JPG"></figure>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pantry Pal -->
+                    <div class="ds-work-list">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
+                                <section>
+                                    <h3 class="ds-work-tilte">Pantry Pal</h3>
+                                    <p>Pantry Pal is a mobile recipe app designed to work on android and ios utilizing
+                                        Flutter. We first crawled a large set of recipe through a recipe api. Then we
+                                        indexed and stored the recipe through the online database MongDB. Lastly we
+                                        fetched information in our local application and generated real time suggestion
+                                        of the next meal for the user.</p>
+                                    <h2 class="ds-heading">Technology</h2>
+                                    <ul class="ds-skills-list">
+                                        <li>Flutter</li>
+                                        <li>MongoDB</li>
+                                        <li>Git</li>
+                                    </ul>
+                                    <a href="Pantry-Pal-Detail.html" class="ds-button">Details</a>
+                                </section>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
+                                <figure><img src="assets/images/PantryPalFrontPage.JPG"></figure>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -107,4 +247,5 @@
         }
     </script>
 </body>
+
 </html>
