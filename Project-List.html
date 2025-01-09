@@ -2,9 +2,109 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Main CSS -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <title>Projects - Lance Li</title>
 </head>
 <body>
+    <!-- header -->
+    <header class="ds-header" id="site-header">
+        <div class="container">
+            <div class="ds-header-inner">
+              <a href="index.html" class="ds-logo">
+                <span>L</span>Lance Li
+              </a>
+              <ul class="ds-social">
+                <a href="index.html" class="ds-button">Back to Home</a>
+                <li><a href="https://github.com/DevLance112" target="_blank"><i class="ri-github-fill"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/lance-li-3158aa142/" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
+              </ul>
+            </div>
+        </div>
+    </header>
 
+    <!--  Work -->
+    <div class="ds-work-section">
+        <div class="container">
+            <h2 class="ds-heading">All Projects</h2>
+            <div class="ds-work-list-section">
+                <!-- ORC and Translate -->
+                <div class="ds-work-list">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
+                            <section>
+                                <h3 class="ds-work-tilte">ORC and Translate</h3>
+                                <p>Built a web app using Flask in under 4 hours to test the capabilities of AI-driven development. Integrated Tesseract-OCR for text extraction and Google Translate API for multilingual translation.</p>
+                                <h2 class="ds-heading">Technology</h2>
+                                <ul class="ds-skills-list">
+                                    <li>Python</li>
+                                    <li>HTML/CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>AI driven</li>
+                                </ul>
+                                <a href="ORC%20and%20Translate.html" class="ds-button">Details</a>
+                            </section>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
+                            <figure><img src="assets/images/ORC%20and%20translate-mobile.jpg"></figure>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more projects following the same pattern -->
+                <!-- Movie Browsing Website -->
+                <div class="ds-work-list">
+                    <!-- Similar structure as above -->
+                </div>
+
+                <!-- Webcrawler Project -->
+                <div class="ds-work-list">
+                    <!-- Similar structure as above -->
+                </div>
+
+                <!-- Pantry Pal -->
+                <div class="ds-work-list">
+                    <!-- Similar structure as above -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="ds-footer text-center">
+        <div class="container">
+            <section>
+                <span>Stay in touch</span>
+                <h4>Ready to talk?</h4>
+                <p>Feel free to contact me</p>
+                <button id="copyEmailButton" class="ds-button" onclick="copyEmail()">Lets Talk</button>
+            </section>
+            <span class="ds-copyright">© 2024 All rights reserved.</span>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        function copyEmail() {
+            const tempInput = document.createElement('input');
+            tempInput.value = 'lanceprofe@gmail.com';
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            const button = document.getElementById('copyEmailButton');
+            button.textContent = 'Shoot me an email, I copied it for ya!';
+        }
+    </script>
 </body>
 </html>
