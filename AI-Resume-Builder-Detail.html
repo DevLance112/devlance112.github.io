@@ -38,24 +38,30 @@
     <header class="ds-header" id="site-header">
         <div class="container">
             <div class="ds-header-inner">
+              <!-- logo -->
               <a href="index.html" class="ds-logo">
                 <span>L</span>Lance Li
               </a>
+              <!-- logo -->
+              <div class="ds-button-sec">
+
+              </div>
+              <!-- social -->
               <ul class="ds-social">
+                <li></li><a href="assets/files/Lance Li s Simplified Resume 1-7-2025 trimmed relevant coursework.pdf" class="ds-button">Download Tech Resume</a>
+                <li></li><a href="assets/files/LanceLiAdministrativeResume4-7-2025.pdf" class="ds-button">Download Administrative Resume</a>
                 <li><a href="https://github.com/DevLance112" target="_blank"><i class="ri-github-fill"></i></a></li>
                 <li><a href="https://www.linkedin.com/in/lance-li-3158aa142/" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
               </ul>
+              <!-- social -->
             </div>
         </div>
     </header>
    
    <main class="ds-main-section">
      <div class="container">
-        <!-- Added Construction Notice -->
-        <div class="alert alert-warning text-center py-4 mb-5" style="background-color: #fff3cd; border: 2px dashed #ffc107;">
-            <h2 style="color: #856404;"><i class="ri-tools-fill"></i> UNDER CONSTRUCTION <i class="ri-tools-fill"></i></h2>
-            <p class="mb-0" style="font-size: 1.1rem;">This project page is currently being updated. Please check back soon!</p>
-        </div>
+        <!-- Load Construction Notice Component -->
+        <div id="construction-notice-container"></div>
         
         <div class="ds-work-details-section">
             <div class="text-center">
@@ -180,6 +186,16 @@
             const button = document.getElementById('copyEmailButton');
             button.textContent = 'Shoot me an email, I copied it for ya!';
         }
+
+        // Load the construction notice component
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('components/construction-notice.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('construction-notice-container').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading component:', error));
+        });
     </script>
   </body>
 </html> 

@@ -40,6 +40,7 @@
             <!-- logo -->
             <!-- social -->
             <ul class="ds-social">
+                
                 <li><a href="https://github.com/SirRizzalot" target="_blank"><i class="ri-github-fill"></i></a></li>
                 <li><a href="https://www.linkedin.com/in/lance-li-3158aa142/" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
             </ul>
