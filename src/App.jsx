@@ -64,20 +64,53 @@ function isPortfolioRoute(pathname) {
   return path === "/" || path === "/portfolio" || path === "/projects" || path.startsWith("/projects/");
 }
 
-function scrollToRouteTarget(hash) {
-  if (!hash) {
-    window.scrollTo({ top: 0, left: 0 });
-    return;
-  }
+function withInstantScroll(callback) {
+  const root = document.documentElement;
+  const body = document.body;
+  const previousRootScrollBehavior = root.style.scrollBehavior;
+  const previousBodyScrollBehavior = body.style.scrollBehavior;
 
-  const target = document.getElementById(decodeURIComponent(hash.slice(1)));
-  if (target) target.scrollIntoView({ block: "start" });
+  root.style.scrollBehavior = "auto";
+  body.style.scrollBehavior = "auto";
+  callback();
+
+  requestAnimationFrame(() => {
+    root.style.scrollBehavior = previousRootScrollBehavior;
+    body.style.scrollBehavior = previousBodyScrollBehavior;
+  });
 }
 
-function usePortfolioNavigation(rootRef, setRoute) {
+function scrollToRouteTarget(hash) {
+  withInstantScroll(() => {
+    if (!hash) {
+      window.scrollTo(0, 0);
+      return;
+    }
+
+    let targetId = "";
+    try {
+      targetId = decodeURIComponent(hash.slice(1));
+    } catch {
+      window.scrollTo(0, 0);
+      return;
+    }
+
+    const target = document.getElementById(targetId);
+    if (target) {
+      target.scrollIntoView({ block: "start", behavior: "auto" });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  });
+}
+
+function usePortfolioNavigation(rootRef, setRoute, routeScrollTargetRef) {
   useEffect(() => {
     const root = rootRef.current;
     if (!root) return undefined;
+
+    const previousScrollRestoration = window.history.scrollRestoration;
+    window.history.scrollRestoration = "manual";
 
     function handleClick(event) {
       if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
@@ -99,17 +132,24 @@ function usePortfolioNavigation(rootRef, setRoute) {
 
       event.preventDefault();
 
+      const currentRouteKey = getRouteKey(getRouteFromPathname(window.location.pathname));
+      const nextRoute = getRouteFromPathname(url.pathname);
+      const nextRouteKey = getRouteKey(nextRoute);
       const nextUrl = `${url.pathname}${url.search}${url.hash}`;
       const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
       if (nextUrl !== currentUrl) window.history.pushState({}, "", nextUrl);
 
-      setRoute(getRouteFromPathname(url.pathname));
-      requestAnimationFrame(() => scrollToRouteTarget(url.hash));
+      routeScrollTargetRef.current = url.hash;
+      setRoute(nextRoute);
+
+      if (nextRouteKey === currentRouteKey) {
+        requestAnimationFrame(() => scrollToRouteTarget(url.hash));
+      }
     }
 
     function handlePopState() {
+      routeScrollTargetRef.current = window.location.hash;
       setRoute(getRoute());
-      requestAnimationFrame(() => scrollToRouteTarget(window.location.hash));
     }
 
     root.addEventListener("click", handleClick);
@@ -118,8 +158,17 @@ function usePortfolioNavigation(rootRef, setRoute) {
     return () => {
       root.removeEventListener("click", handleClick);
       window.removeEventListener("popstate", handlePopState);
+      window.history.scrollRestoration = previousScrollRestoration;
     };
-  }, [rootRef, setRoute]);
+  }, [rootRef, routeScrollTargetRef, setRoute]);
+}
+
+function useRouteScroll(routeKey, routeScrollTargetRef) {
+  useLayoutEffect(() => {
+    const hash = routeScrollTargetRef.current;
+    scrollToRouteTarget(hash);
+    requestAnimationFrame(() => scrollToRouteTarget(hash));
+  }, [routeKey, routeScrollTargetRef]);
 }
 
 function usePortfolioMotion(rootRef, { opening = false, routeKey = "" } = {}) {
@@ -1124,10 +1173,12 @@ function HomePage() {
 
 export default function App() {
   const rootRef = useRef(null);
+  const routeScrollTargetRef = useRef(window.location.hash);
   const [route, setRoute] = useState(getRoute);
   const currentRouteKey = getRouteKey(route);
-  usePortfolioNavigation(rootRef, setRoute);
+  usePortfolioNavigation(rootRef, setRoute, routeScrollTargetRef);
   usePortfolioMotion(rootRef, { opening: route.type === "landing", routeKey: currentRouteKey });
+  useRouteScroll(currentRouteKey, routeScrollTargetRef);
   const currentProject = route.type === "project" ? projects.find((project) => project.slug === route.slug) : null;
 
   return (
