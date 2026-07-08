@@ -149,9 +149,9 @@ async function main() {
         <path d="M1600 486H1940" stroke="#f6f2e8" stroke-opacity="0.18"/>
       </g>
       <g opacity="0.54">
-        ${smallText("VISUAL", 1540, 760, 50, palette.ink)}
-        ${smallText("AI DESIGN", 1540, 832, 50, palette.cyan)}
-        ${smallText("BRAND SYSTEM", 1540, 904, 50, palette.amber)}
+        ${smallText("PROJECT OPS", 1540, 760, 50, palette.ink)}
+        ${smallText("AI WORKFLOWS", 1540, 832, 50, palette.cyan)}
+        ${smallText("FULL-STACK", 1540, 904, 50, palette.amber)}
       </g>
       <path d="M0 1160C420 1028 668 1094 1018 942C1270 832 1490 642 1868 638C2088 636 2252 696 2400 756V1500H0Z" fill="#050505" opacity="0.62"/>
     `
@@ -171,7 +171,7 @@ async function main() {
       <path d="M300 346C382 238 604 232 700 354" fill="none" stroke="${palette.amber}" stroke-opacity="0.64" stroke-width="5"/>
       <rect x="62" y="62" width="876" height="1076" rx="22" fill="none" stroke="#f6f2e8" stroke-opacity="0.16"/>
       <text x="84" y="130" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="800" fill="${palette.cyan}">LANCE LI</text>
-      <text x="84" y="188" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="${palette.muted}">VISUAL / AI / BRAND</text>
+      <text x="84" y="188" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="${palette.muted}">PROJECT / AI / FULL-STACK</text>
       <text x="500" y="1092" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="132" font-weight="800" fill="${palette.ink}" opacity="0.9">LL</text>
     `
   );
@@ -220,7 +220,7 @@ async function main() {
       title: "AI Secretary",
       eyebrow: "VOICE / CALENDAR / TRUST",
       accent: palette.cyan,
-      index: "01",
+      index: "02",
       pattern: patterns.voice,
     })
   );

@@ -157,11 +157,11 @@ function App() {
 
         <div className="hero__content content-frame">
           <div className="hero__copy">
-            <p className="eyebrow">Visual Designer / AI Designer / Brand Designer</p>
-            <h1>Designing AI-native brands with visual restraint.</h1>
+            <p className="eyebrow">Project Management / AI Applications / Full-Stack Software Developer</p>
+            <h1>Building AI-powered systems for operations and service workflows.</h1>
             <p className="hero__lede">
-              I shape digital products, brand systems, and AI workflows for teams that need work to feel sharp,
-              intelligent, and quietly memorable.
+              I combine workforce program coordination, stakeholder communication, and full-stack development to
+              turn messy workflows into measurable AI-assisted products.
             </p>
             <div className="hero__actions">
               <a className="button button--primary" href="#projects">

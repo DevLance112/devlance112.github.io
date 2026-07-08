@@ -75,17 +75,17 @@
                   <div class="ds-work-content-sec">
                       <div class="row justify-content-center">
                           <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
-                              <p>Phasellus non faucibus purus, a venenatis diam. In faucibus orci mauris, porttitor egestas diam elementum non. Vestibulum non metus tempus, sagittis libero sed, euismod purus. Cras dolor nulla, hendrerit vitae libero eu, finibus ultricies dolor. Vestibulum non metus tempus, sagittis libero sed, euismod purus. Cras dolor nulla, hendrerit vitae libero eu, finibus ultricies dolor.</p>
+                              <p>This legacy detail page documents the project goal, the user problem, the technical approach, and the delivery outcome so the work can be reviewed without relying on filler copy.</p>
 
-                              <p>Curabitur quis tortor sit amet ligula lobortis auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer ut turpis eget urna egestas maximus. </p>
+                              <p>The case study should connect product requirements, implementation decisions, and measurable results in plain language.</p>
 
-                              <h2>Sub Title for project</h2>
-                              <p>Phasellus non faucibus purus, a venenatis diam. In faucibus orci mauris, porttitor egestas diam elementum non. Vestibulum non metus tempus, sagittis libero sed, euismod purus. Cras dolor nulla, hendrerit vitae libero eu, finibus ultricies dolor. Vestibulum non metus tempus, sagittis libero sed, euismod purus. Cras dolor nulla, hendrerit vitae libero eu, finibus ultricies dolor.</p>
+                              <h2>Project delivery notes</h2>
+                              <p>The notes below summarize the responsibilities, systems, and decisions that moved the project from concept into a working prototype or delivered product.</p>
 
                               <ul>
-                                <li>Phasellus non faucibus purus, a venenatis diam. In faucibus orci mauris, porttitor egestas diam elementum non.</li>
-                                 <li>Vestibulum non metus tempus, sagittis libero sed, euismod purus.</li>
-                                 <li>Vestibulum non metus tempus, sagittis libero sed, euismod purus. Cras dolor nulla, hendrerit vitae libero eu, finibus ultricies dolor. Vestibulum non metus tempus.</li>
+                                <li>Clarify the target users, workflows, and constraints before implementation.</li>
+                                 <li>Document the technical architecture, data model, and interface behavior.</li>
+                                 <li>Capture outcomes, risks, and future improvements for stakeholders.</li>
                               </ul>
                           </div>
                       </div>
@@ -94,7 +94,7 @@
                   <div class="ds-work-content-sec">
                       <div class="row justify-content-center">
                           <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
-                              <p>Phasellus non faucibus purus, a venenatis diam. In faucibus orci mauris, porttitor egestas diam elementum non. Vestibulum non metus tempus, sagittis libero sed, euismod purus. Cras dolor nulla, hendrerit vitae libero eu, finibus ultricies dolor. Vestibulum non metus tempus, sagittis libero sed, euismod purus. Cras dolor nulla, hendrerit vitae libero eu, finibus ultricies dolor.</p>
+                              <p>Each project page should make the work inspectable: what was built, what tradeoffs mattered, how the work was coordinated, and what changed because of the final deliverable.</p>
                           </div>
                       </div>
                   </div>

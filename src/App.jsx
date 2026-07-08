@@ -6,6 +6,9 @@ import {
   ArrowUpRight,
   BrainCircuit,
   Code2,
+  Download,
+  Github,
+  Linkedin,
   Mail,
   MapPin,
   PenTool,
@@ -382,13 +385,13 @@ function OpeningAnimation() {
       <div className="opening-glyph" />
       <div className="opening-copy">
         <span className="opening-word">
-          <span>Visual</span>
+          <span>Project</span>
         </span>
         <span className="opening-word">
           <span>AI</span>
         </span>
         <span className="opening-word">
-          <span>Brand</span>
+          <span>Full-stack</span>
         </span>
       </div>
       <div className="opening-meta">
@@ -423,13 +426,23 @@ function Nav({ current = "home" }) {
       <nav className="nav-links" aria-label="Sections">
         <a href={isHome ? "#experience" : "/portfolio#experience"}>Experience</a>
         <a href="/projects">All Work</a>
-        <a href={isHome ? "#strengths" : "/portfolio#strengths"}>Strengths</a>
-        <a href={isHome ? "#contact" : "/portfolio#contact"}>Contact</a>
       </nav>
-      <a className="nav-cta" href={`mailto:${contact.email}`}>
-        <Mail size={18} aria-hidden="true" />
-        <span>Contact</span>
-      </a>
+      <div className="nav-actions" aria-label="Portfolio actions">
+        <a className="nav-action nav-resume" href={contact.resume} download>
+          <Download size={18} aria-hidden="true" />
+          <span>Resume</span>
+        </a>
+        <a className="nav-action nav-icon-link" href={contact.linkedin} target="_blank" rel="noreferrer" aria-label="Open Lance Li on LinkedIn">
+          <Linkedin size={18} aria-hidden="true" />
+        </a>
+        <a className="nav-action nav-icon-link" href={contact.github} target="_blank" rel="noreferrer" aria-label="Open Lance Li on GitHub">
+          <Github size={18} aria-hidden="true" />
+        </a>
+        <a className="nav-cta" href={`mailto:${contact.email}`}>
+          <Mail size={18} aria-hidden="true" />
+          <span>Contact</span>
+        </a>
+      </div>
     </header>
   );
 }
@@ -446,6 +459,8 @@ function LandingPage() {
         </a>
         <div className="landing-nav-links">
           <a href="/projects">Archive</a>
+          <a href={contact.resume} download>Resume</a>
+          <a href={contact.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
           <a href={`mailto:${contact.email}`}>Contact</a>
         </div>
       </header>
@@ -456,12 +471,12 @@ function LandingPage() {
       </div>
       <div className="landing-inner">
         <div className="landing-meta">
-          <span>Visual / AI / Brand</span>
+          <span>Project Management / AI Apps / Full-stack</span>
           <span>Bay Area, CA</span>
           <span>Portfolio 2026</span>
         </div>
         <div className="landing-copy">
-          <p className="eyebrow">Visual Designer / AI Designer / Brand Designer</p>
+          <p className="eyebrow">Project Management / Administrative / AI Application / Full-Stack Software Developer</p>
           <h1 className="landing-title hero-title" aria-label="Lance Li">
             <span className="title-mask">
               <span className="hero-title-line">Lance</span>
@@ -471,7 +486,7 @@ function LandingPage() {
             </span>
           </h1>
           <p className="hero-text">
-            A restrained, high-contrast portfolio system for intelligent products, brand identities, and AI-driven visual direction.
+            A portfolio of workforce operations, AI application development, and full-stack product systems.
           </p>
           <div className="hero-actions">
             <a className="primary-action" href="/portfolio">
@@ -487,7 +502,7 @@ function LandingPage() {
         <div className="landing-index" aria-label="Portfolio summary">
           <span>{featuredProjects.length.toString().padStart(2, "0")} featured systems</span>
           <span>{projects.length.toString().padStart(2, "0")} detailed studies</span>
-          <span>Identity / AI UX / product narrative</span>
+          <span>Operations / AI applications / product delivery</span>
         </div>
       </div>
       <div className="hero-peek landing-peek">
@@ -506,23 +521,23 @@ function Hero() {
       <Nav />
       <div className="hero-inner">
         <div className="hero-copy">
-          <p className="eyebrow">Visual Designer / AI Designer / Brand Designer</p>
-          <h1 className="hero-title" aria-label="Designing identities for intelligent products.">
+          <p className="eyebrow">Project Management / Administrative / AI Application / Full-Stack Software Developer</p>
+          <h1 className="hero-title" aria-label="Building systems for AI-powered operations.">
             <span className="title-mask">
-              <span className="hero-title-line">Designing </span>
+              <span className="hero-title-line">Building </span>
             </span>
             <span className="title-mask">
-              <span className="hero-title-line">identities for </span>
+              <span className="hero-title-line">systems for </span>
             </span>
             <span className="title-mask">
-              <span className="hero-title-line">intelligent </span>
+              <span className="hero-title-line">AI-powered </span>
             </span>
             <span className="title-mask">
-              <span className="hero-title-line">products.</span>
+              <span className="hero-title-line">operations.</span>
             </span>
           </h1>
           <p className="hero-text">
-            I combine visual systems, AI product thinking, and operational strategy to build brands and interfaces that feel sharp, useful, and future-facing.
+            I combine project management, operations, AI application development, and full-stack engineering to turn ambiguous workflows into measurable products and programs.
           </p>
           <div className="hero-actions">
             <a className="primary-action" href="#projects">
@@ -536,14 +551,14 @@ function Hero() {
           </div>
         </div>
         <div className="hero-panel" aria-label="Portfolio focus areas">
-          <span>01 Visual Systems</span>
-          <span>02 AI Product Experience</span>
-          <span>03 Brand Strategy</span>
+          <span>01 Workforce Operations</span>
+          <span>02 AI Applications</span>
+          <span>03 Full-Stack Delivery</span>
         </div>
       </div>
       <div className="hero-peek">
         <span>Bay Area, CA</span>
-        <span>AI products, service systems, launch narratives</span>
+        <span>Workforce programs, AI products, service systems</span>
       </div>
     </section>
   );
@@ -564,15 +579,15 @@ function Experience() {
             <span className="image-curtain" aria-hidden="true" />
             <figcaption>
               <span>Signal study</span>
-              <span>AI workflow / brand motion</span>
+              <span>AI workflow / operations system</span>
             </figcaption>
           </figure>
         </div>
         <div className="about-copy">
           <p className="section-kicker" data-reveal-copy>Experience</p>
-          <h2 data-reveal-copy>Design instincts backed by product execution.</h2>
+          <h2 data-reveal-copy>Operational leadership backed by full-stack execution.</h2>
           <p data-reveal-copy>
-            I am Lance Li, a Bay Area designer working across visual identity, AI-assisted product experiences, and brand systems. My background combines design direction with project coordination, software prototyping, and stakeholder communication, which helps me move ideas from concept into measurable systems.
+            I am Lance Li, a Bay Area project coordinator, AI application builder, and full-stack software developer. My background combines workforce program operations, stakeholder communication, software prototyping, and UC Irvine degrees in Business Administration and Computer Science.
           </p>
           <div className="contact-list" aria-label="Contact details">
             <a href={`mailto:${contact.email}`} data-reveal-card>
@@ -678,10 +693,10 @@ function Strengths() {
         <div className="section-heading compact">
           <div data-reveal-copy>
             <p className="section-kicker">Strengths</p>
-            <h2>A practice built for intelligent brands.</h2>
+            <h2>A practice built for operational AI systems.</h2>
           </div>
           <p data-reveal-copy>
-            The throughline is clarity: visual precision, system thinking, and enough technical fluency to make AI concepts feel real.
+            The throughline is clarity: project structure, stakeholder communication, and enough technical fluency to make AI workflows useful in the real world.
           </p>
         </div>
         <div className="strength-grid">
@@ -709,7 +724,7 @@ function ContactFooter() {
       <SectionTitle>Contact</SectionTitle>
       <div className="footer-inner">
         <p className="section-kicker" data-reveal-copy>Contact</p>
-        <h2 data-reveal-copy>Let us build the next intelligent visual system.</h2>
+        <h2 data-reveal-copy>Let us build the next useful AI workflow.</h2>
         <div className="footer-actions">
           <a className="primary-action" href={`mailto:${contact.email}`} data-reveal-card>
             <Mail size={19} aria-hidden="true" />
@@ -722,7 +737,7 @@ function ContactFooter() {
         </div>
         <div className="footer-line" data-reveal-card>
           <span>{contact.location}</span>
-          <span>Available for visual identity, AI design, brand systems, and product prototypes.</span>
+          <span>Available for project coordination, AI application development, full-stack prototypes, and operations systems.</span>
         </div>
       </div>
     </footer>
@@ -822,6 +837,27 @@ function ProjectsArchive() {
   );
 }
 
+function getProjectArticle(project) {
+  const fallbackArticle = {
+    lede: project.summary,
+    intro: [project.challenge, project.contribution, project.outcome],
+    sections: project.analysis.map((item) => ({
+      title: item.title,
+      paragraphs: [item.body],
+    })),
+    closingTitle: "Where it landed",
+    closing: [project.highlights.join(" ")],
+  };
+
+  return {
+    ...fallbackArticle,
+    ...project.article,
+    intro: project.article?.intro?.length ? project.article.intro : fallbackArticle.intro,
+    sections: project.article?.sections?.length ? project.article.sections : fallbackArticle.sections,
+    closing: project.article?.closing?.length ? project.article.closing : fallbackArticle.closing,
+  };
+}
+
 function ProjectDetail({ project }) {
   if (!project) {
     return <NotFoundPage />;
@@ -831,15 +867,9 @@ function ProjectDetail({ project }) {
   const projectIndex = projects.findIndex((item) => item.slug === project.slug) + 1;
   const articleImages = project.images.length ? project.images : [project.cover];
   const heroImage = articleImages[0];
-  const leadImage = articleImages[1] || articleImages[0];
-  const readingLinks = [
-    { href: "#case-brief", label: "Opening brief" },
-    ...project.analysis.map((item, index) => ({
-      href: `#chapter-${index + 1}`,
-      label: item.title,
-    })),
-    { href: "#case-notes", label: "Field notes" },
-  ];
+  const articleImagePool = articleImages.length > 1 ? articleImages.slice(1) : articleImages;
+  const getArticleImage = (index) => articleImagePool[index % articleImagePool.length];
+  const article = getProjectArticle(project);
 
   return (
     <>
@@ -883,96 +913,66 @@ function ProjectDetail({ project }) {
           </aside>
         </div>
         <div className="case-hero-spine">
-          <span>Read from the brief downward</span>
-          <span>{project.tags.join(" / ")}</span>
+          <span>Project journal</span>
+          <span>{project.status}</span>
         </div>
       </section>
 
       <section className="case-blog-shell section-band">
         <SectionTitle>Journal</SectionTitle>
-        <div className="section-inner case-blog-layout">
-          <aside className="case-reading-rail" aria-label={`${project.title} reading order`}>
-            <p>Reading order</p>
-            {readingLinks.map((link, index) => (
-              <a href={link.href} key={link.href}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                {link.label}
-              </a>
+        <div className="section-inner case-article-layout">
+          <article className="case-article" aria-label={`${project.title} project article`}>
+            <header className="case-article-intro" data-motion-section>
+              <div className="case-article-copy case-article-lede" data-reveal-copy>
+                <p className="case-article-meta-line">
+                  {project.label} / {project.year} / {project.role}
+                </p>
+                <p className="case-article-dek">{article.lede}</p>
+                {article.intro.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+            </header>
+
+            <figure className="case-article-figure case-article-lead-figure image-reveal" data-image-reveal>
+              <img src={getArticleImage(0)} alt={`${project.title} article context`} />
+              <span className="image-curtain" aria-hidden="true" />
+              <figcaption>
+                <span>Article image</span>
+                <span>{project.title}</span>
+              </figcaption>
+            </figure>
+
+            {article.sections.map((section, index) => (
+              <section className="case-article-section" id={`article-section-${index + 1}`} key={section.title} data-motion-section>
+                <div className="case-article-copy" data-reveal-copy>
+                  <h2>{section.title}</h2>
+                  {section.paragraphs.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
+                <figure className="case-article-figure image-reveal" data-image-reveal>
+                  <img src={getArticleImage(index + 1)} alt={`${project.title} ${section.title}`} />
+                  <span className="image-curtain" aria-hidden="true" />
+                  <figcaption>
+                    <span>{section.title}</span>
+                    <span>{project.title}</span>
+                  </figcaption>
+                </figure>
+              </section>
             ))}
-          </aside>
 
-          <article className="case-story">
-            <section className="case-story-block case-lead-block" id="case-brief" data-motion-section>
-              <span className="chapter-watermark" data-section-title>Brief</span>
-              <div className="case-story-copy" data-reveal-copy>
-                <p className="section-kicker">Opening brief</p>
-                <h2>{project.challenge}</h2>
-                <p>{project.summary}</p>
-              </div>
-              <div className="case-brief-cards">
-                <article data-reveal-card>
-                  <span>Contribution</span>
-                  <p>{project.contribution}</p>
-                </article>
-                <article data-reveal-card>
-                  <span>Outcome</span>
-                  <p>{project.outcome}</p>
-                </article>
-              </div>
-              <figure className="case-context-figure image-reveal" data-image-reveal>
-                <img src={leadImage} alt={`${project.title} contextual visual`} />
-                <span className="image-curtain" aria-hidden="true" />
-                <figcaption>
-                  <span>Context visual</span>
-                  <span>{project.label}</span>
-                </figcaption>
-              </figure>
-            </section>
-
-            {project.analysis.map((item, index) => {
-              const image = articleImages[index + 2] || (articleImages.length > 1 ? articleImages[(index + 1) % articleImages.length] : null);
-              return (
-                <section className="case-story-block case-chapter" id={`chapter-${index + 1}`} key={item.title} data-motion-section>
-                  <span className="chapter-watermark" data-section-title>{String(index + 1).padStart(2, "0")}</span>
-                  <div className="case-story-copy" data-reveal-copy>
-                    <span className="chapter-number">{String(index + 1).padStart(2, "0")}</span>
-                    <h2>{item.title}</h2>
-                    <p>{item.body}</p>
-                  </div>
-                  {image && (
-                    <figure className="case-context-figure image-reveal" data-image-reveal>
-                      <img src={image} alt={`${project.title} ${item.title} visual`} />
-                      <span className="image-curtain" aria-hidden="true" />
-                      <figcaption>
-                        <span>{item.title}</span>
-                        <span>{project.title}</span>
-                      </figcaption>
-                    </figure>
-                  )}
-                </section>
-              );
-            })}
-
-            <section className="case-story-block case-notes-block" id="case-notes" data-motion-section>
-              <span className="chapter-watermark" data-section-title>Notes</span>
-              <div className="case-story-copy" data-reveal-copy>
-                <p className="section-kicker">Field notes</p>
-                <h2>What this project proves about the system.</h2>
-              </div>
-              <div className="case-notes-grid">
-                {project.highlights.map((highlight, index) => (
-                  <article key={highlight} data-reveal-card>
-                    <span>{String(index + 1).padStart(2, "0")}</span>
-                    <p>{highlight}</p>
-                  </article>
+            <footer className="case-article-footer" data-motion-section>
+              <div className="case-article-copy" data-reveal-copy>
+                <h2>{article.closingTitle || "Where it landed"}</h2>
+                {article.closing.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
                 ))}
               </div>
-              <div className="case-tags case-blog-tags" data-reveal-card>
-                {project.tags.map((tag) => (
-                  <span key={tag}>{tag}</span>
-                ))}
-              </div>
-            </section>
+              <p className="case-article-tools" data-reveal-card>
+                Built with {project.tags.join(", ")}.
+              </p>
+            </footer>
           </article>
         </div>
       </section>
