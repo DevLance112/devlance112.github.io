@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Google Fots -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+      <!-- Remixicon Icon -->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+      <!-- Remixicon Icon -->
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <!-- Main CSS -->
+      <link href="assets/css/main.css" rel="stylesheet">
+
+
+    <title>Movie Browsing Website</title>
+      <style>
+          img {
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+          }
+      </style>
+  </head>
+  <body>
+   
+    <!-- header -->
+    <header class="ds-header" id="site-header">
+        <div class="container">
+            <div class="ds-header-inner">
+              <!-- logo -->
+              <a href="index.html" class="ds-logo">
+                <span>L</span>Lance Li
+              </a>
+              <!-- logo -->
+              <!-- social -->
+              <ul class="ds-social">
+                <li></li><a href="assets/files/Lance_Li_Tech_Resume.pdf" class="ds-button">Download Tech Resume</a>
+                <li></li><a href="assets/files/LanceLiAdministrativeResume4-7-2025.pdf" class="ds-button">Download Administrative Resume</a>
+                <li><a href="https://github.com/SirRizzalot" target="_blank"><i class="ri-github-fill"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/lance-li-3158aa142/" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
+              </ul>
+              <!-- social -->
+            </div>
+        </div>
+        <style>
+            a {
+                color: blue;
+                text-underline:blue;
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+        </style>
+    </header>
+    <!-- header -->
+   
+   <main class="ds-main-section">
+     <div class="container">
+        <div class="ds-work-details-section">
+            <div class="text-center">
+              <a href="index.html" class="ds-button ds-arrow-button"><i class="ri-arrow-left-s-line"></i> BAck</a>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
+                  <header class="ds-work-det-hed">
+                      <h1 class="ds-work-det-title">ORC and translate</h1>
+                      <span class="ds-work-det-dep">img to text and translation service - 2024</span>
+                  </header>
+                  <figure><img src="assets/images/ORC%20and%20translate-web.PNG"></figure>
+
+                  <div class="ds-work-content-sec">
+                      <div class="row justify-content-center">
+                          <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                              <p>This project focuses on building a web application that allows users to upload an image, extract its text using Optical Character Recognition (OCR), and translate the extracted text into a selected language. The purpose of the application is to provide a user-friendly tool for individuals who need to quickly translate text from images. The app ensures seamless operation by supporting multiple languages and displaying translations line-by-line for better readability.</p>
+
+                              <p>This project allowed me to gain hands-on experience with fast AI driven development and error/bug fixing on AI generated codes.</p>
+
+                              <h2>Technology</h2>
+                              <ul>
+                                  <li><b>Programming Language:</b> Python (Flask for the web framework)</li>
+                                  <li><b>Web Framework:</b> Flask – lightweight and suitable for small web applications.</li>
+                                  <li><b>OCR Library:</b> Tesseract-OCR – open-source library for text extraction from images.</li>
+                                  <li><b>Translation API:</b> googletrans library for accessing Google Translate's services.</li>
+                                  <li><b>Frontend Technologies:</b> HTML5, CSS3, and JavaScript for UI/UX.</li>
+                                  <li><b>Design Tool:</b> Bootstrap principles for responsive layout (custom CSS without using the Bootstrap library directly).</li>
+                                  <li><b>State Management:</b> Cookies for handling temporary data (no server-side storage).</li>
+                              </ul>
+
+                              <h2>Key implementations</h2>
+
+                              <ul>
+                                  <li><b>Image Upload and Preview:</b> Users upload an image that is displayed immediately to the left of the translation output.</li>
+                                  <li><b>OCR Text Extraction:</b>  The uploaded image is processed using the Tesseract-OCR library to extract text.</li>
+                                  <li><b>Translation Service:</b>  The extracted text is translated into the target language using the googletrans library.</li>
+                                  <li><b>Line-by-Line Display:</b>  The original and translated texts are displayed side-by-side in a tabular format for easy comparison.</li>
+                                  <li><b>Language Selection:</b>  Dropdowns are provided for source and target language selection, with simplified Chinese as the default target language.</li>
+                              </ul>
+
+                              <h2>Frontend Design Choices</h2>
+                              <ul>
+                                  <li><b>Minimalist Interface:</b>  The design avoids unnecessary complexity, focusing on core functionalities.</li>
+                                  <li><b>Mobile-Responsive Layout:</b>  CSS adjustments ensure the app looks good on both desktop and mobile devices, with flexible column stacking on smaller screens.</li>
+                                  <figure><img src="assets/images/ORC%20and%20translate-mobile.jpg" style="max-width: 50%; "></figure>
+                                  <li><b>Dropdowns for Language Selection:</b>  Dropdowns with reduced size and separators visually indicate the direction of translation.</li>
+                                  <li><b>Table for Line-by-Line Output:</b>  A table format was chosen to align original and translated text side by side, improving readability and user comprehension.</li>
+                              </ul>
+
+                              <h2>Backend Design Choices
+                                  </h2>
+                              <ul>
+                                  <li><b>Flask Framework:</b>  Chosen for its simplicity and lightweight nature, making it perfect for small projects.</li>
+                                  <li><b>No Server-Side Storage:</b>  Cookies are used to temporarily store data during the session, ensuring privacy and avoiding the need for databases. </li>
+                                  <li><b>Google Translate API:</b>  The googletrans library simplifies the interaction with translation services without requiring manual API management. </li>
+                                  <li><b>Error Handling:</b>  Basic error handling ensures users receive meaningful feedback if translation or file upload fails. </li>
+
+                              </ul>
+
+
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+     </div>
+   </main>
+
+    <!--  footer -->
+    <footer class="ds-footer text-center">
+        <div class="container">
+            <section>
+                <span>Stay in touch</span>
+                <h4>Ready to talk?</h4>
+                <p>Feel free to contact me</p>
+                <button id="copyEmailButton" class="ds-button" onclick="copyEmail()">Lets Talk</button>
+            </section>
+            <span class="ds-copyright">© 2022 All rights reserved. <a target="_blank" href="http://www.mobanwang.com/" title="网页模板">网页模板</a>.</span>
+        </div>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        function copyEmail() {
+            const tempInput = document.createElement('input');
+            tempInput.value = 'lanceprofe@gmail.com';
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            const button = document.getElementById('copyEmailButton');
+            button.textContent = 'Shoot me an email, I copied it for ya!';
+        }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Remixicon Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Main CSS -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <title>NewU InscribeX</title>
+    <style>
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        a {
+            color: blue;
+            text-underline: blue;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="ds-header" id="site-header">
+        <div class="container">
+            <div class="ds-header-inner">
+                <a href="index.html" class="ds-logo">
+                    <span>L</span>Lance Li
+                </a>
+                <ul class="ds-social">
+                    <li></li><a href="assets/files/Lance_Li_Tech_Resume.pdf" class="ds-button">Download Tech Resume</a>
+                    <li></li><a href="assets/files/LanceLiAdministrativeResume4-7-2025.pdf" class="ds-button">Download Administrative Resume</a>
+                    <li><a href="https://github.com/DevLance112" target="_blank"><i class="ri-github-fill"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/lance-li-3158aa142/" target="_blank"><i
+                                class="ri-linkedin-fill"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="ds-main-section">
+        <div class="container">
+            <div class="ds-work-details-section">
+                <div class="text-center">
+                    <a href="index.html" class="ds-button ds-arrow-button"><i class="ri-arrow-left-s-line"></i> BACK</a>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
+                        <header class="ds-work-det-hed">
+                            <h1 class="ds-work-det-title">NewU InscribeX</h1>
+                            <span class="ds-work-det-dep">Web3 Communication Platform - 2024</span>
+                        </header>
+                        <figure><img src="assets/images/NewU-InscribeX-img/image20.png"></figure>
+                        <div class="ds-work-content-sec">
+                            <div class="row justify-content-center">
+                                <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                                    <!-- Project Team Information -->
+                                    <p>Throughout a 10-week development cycle, I collaborated with a talented team of
+                                        developers to create NewU InscribeX - a Web3 communication platform that bridges
+                                        traditional social networking with blockchain technology. This project was
+                                        sponsored by <a href="https://www.linkedin.com/in/phillipliusr/">Phillip Liu</a>
+                                        and developed with team members <a
+                                            href="https://www.linkedin.com/in/santiagopalomares/">Santiago
+                                            Palomares</a>, <a
+                                            href="https://www.linkedin.com/in/xiaohua-zhang-599318302/">Xiaohua
+                                            Zhang</a>, <a
+                                            href="https://www.linkedin.com/in/anthony-wen-a05656210/">Anthony Wen</a>,
+                                        and <a href="https://www.linkedin.com/in/husain-wafaie/">Husain
+                                            Wafaie</a>. </p>
+
+                                    <!-- Navigation Section -->
+                                    <section>
+                                        <h2>Table of Contents</h2>
+                                        <ul>
+                                            <li><a href="#overview">Project Overview</a></li>
+                                            <li><a href="#personas">User Research & Personas</a></li>
+                                            <li><a href="#functional-requirements">Functional Requirements</a>
+
+                                            </li>
+                                            <li><a href="#non-functional-requirements">Non-Functional Requirements</a>
+                                            </li>
+                                            <li><a href="#constraints">Technical Constraints</a></li>
+                                            <li><a href="#ui-design">User Interface Design</a>
+
+                                            </li>
+                                            <li><a href="#software-design">Technical Architecture</a>
+
+                                            </li>
+                                        </ul>
+                                    </section>
+
+                                    <!-- Personas and Scenarios Section -->
+                                    <section id="personas">
+                                        <h2>Personas/Scenarios</h2>
+                                        <ul>
+                                            <li><a
+                                                    href="https://www.figma.com/board/VQSBZs2T0rf5tJW7RI78qT/Untitled?t=pCLg4mDpZE9ePTsQ-1">Figma
+                                                    Board</a></li>
+                                            <figure><img src="assets/images/NewU-InscribeX-img/image3.jpg"></figure>
+                                        </ul>
+                                    </section>
+
+                                    <!-- Functional Requirements Section -->
+                                    <section id="functional-requirements">
+                                        <h2>Functional Requirements</h2>
+
+                                        <!-- Communication Use Case -->
+                                        <h3>Use Case: Communicate with other users</h3>
+                                        <p><strong>Basic Flow:</strong></p>
+                                        <ol>
+                                            <li>User connects to their wallet</li>
+                                            <li>User switches to the community page</li>
+                                            <li>System presents communication interface showing detailed view (current
+                                                conversations, search bar)</li>
+                                            <li>User searches up the user they would like to communicate with</li>
+                                            <li>User types the message they would like to send</li>
+                                            <li>User presses the submit button</li>
+                                            <li>Message sent to receiver via supporting server</li>
+                                            <li>Message stored in Firebase database</li>
+                                        </ol>
+                                        <p><strong>Alternate Flow:</strong></p>
+                                        <ul>
+                                            <li>If the user is already connected to their wallet, the system skips the
+                                                wallet connection step.</li>
+                                            <li>User selects an existing conversation, bypassing the search step.</li>
+                                            <li>User initiates a group chat by selecting multiple users and sending a
+                                                message to initialize the group.</li>
+                                        </ul>
+                                        <p><strong>Exception Flow:</strong></p>
+                                        <ul>
+                                            <li>If the user is not friends with the recipient, they are prompted to send
+                                                a friend request first.</li>
+                                        </ul>
+
+                                        <h3>Use Case: Buying Assets</h3>
+                                        <p><strong>Basic Flow:</strong></p>
+                                        <ol>
+                                            <li>User connects to their wallet</li>
+                                            <li>User navigates to the marketplace page</li>
+                                            <li>User browses items and selects the desired asset</li>
+                                            <li>User places a bid or purchases directly</li>
+                                            <li>System confirms the transaction</li>
+                                        </ol>
+                                        <p><strong>Alternate Flow:</strong></p>
+                                        <ul>
+                                            <li>User finds the desired item on the home page and proceeds directly to
+                                                purchase or bid.</li>
+                                        </ul>
+                                        <p><strong>Exception Flow:</strong></p>
+                                        <ul>
+                                            <li>If the item is sold or bidding is invalid, the system notifies the user
+                                                and prompts them to retry.</li>
+                                        </ul>
+
+                                        <h3>Use Case: Selling Assets</h3>
+                                        <p><strong>Basic Flow:</strong></p>
+                                        <ol>
+                                            <li>User connects to their wallet</li>
+                                            <li>User navigates to their profile page</li>
+                                            <li>User selects an asset to sell</li>
+                                            <li>User specifies the amount and price</li>
+                                            <li>User confirms the sale</li>
+                                        </ol>
+                                        <p><strong>Alternate Flow:</strong></p>
+                                        <ul>
+                                            <li>User adjusts the sale details before confirmation.</li>
+                                        </ul>
+                                        <p><strong>Exception Flow:</strong></p>
+                                        <ul>
+                                            <li>If the user specifies more assets than they own, the system notifies
+                                                them of the error.</li>
+                                        </ul>
+
+                                        <h3>Use Case: Staking/Re-staking</h3>
+                                        <p><strong>Basic Flow:</strong></p>
+                                        <ol>
+                                            <li>User connects to their wallet</li>
+                                            <li>User navigates to the staking page</li>
+                                            <li>User selects a staking option and specifies the amount</li>
+                                            <li>User confirms the staking action</li>
+                                            <li>System processes the transaction and updates the user's status</li>
+                                        </ol>
+                                        <p><strong>Alternate Flow:</strong></p>
+                                        <ul>
+                                            <li>If the user is already connected, the system skips the wallet connection
+                                                step.</li>
+                                        </ul>
+                                        <p><strong>Exception Flow:</strong></p>
+                                        <ul>
+                                            <li>If the user specifies an invalid amount, the system notifies them and
+                                                prompts for correction.</li>
+                                        </ul>
+
+                                        <h3>Use Case: Lending</h3>
+                                        <p><strong>Basic Flow:</strong></p>
+                                        <ol>
+                                            <li>User connects to their wallet</li>
+                                            <li>User navigates to the lending page</li>
+                                            <li>User selects a lending option and specifies the amount</li>
+                                            <li>User confirms the lending action</li>
+                                            <li>System processes the transaction and updates the user's status</li>
+                                        </ol>
+                                        <p><strong>Alternate Flow:</strong></p>
+                                        <ul>
+                                            <li>If the user is already connected, the system skips the wallet connection
+                                                step.</li>
+                                        </ul>
+                                        <p><strong>Exception Flow:</strong></p>
+                                        <ul>
+                                            <li>If the user specifies an invalid amount, the system notifies them and
+                                                prompts for correction.</li>
+                                        </ul>
+
+                                        <h3>Use Case: Query BTC-GPT</h3>
+                                        <p><strong>Basic Flow:</strong></p>
+                                        <ol>
+                                            <li>User logs in by connecting their wallet</li>
+                                            <li>User navigates to the BTC-GPT page</li>
+                                            <li>User enters a query into the chat interface</li>
+                                            <li>System processes the query and returns the result</li>
+                                        </ol>
+                                        <p><strong>Alternate Flow:</strong></p>
+                                        <ul>
+                                            <li>User shares the result via group chat or direct message.</li>
+                                        </ul>
+                                        <p><strong>Exception Flow:</strong></p>
+                                        <ul>
+                                            <li>If the query is deemed inappropriate, the system notifies the user and
+                                                rejects the query.</li>
+                                        </ul>
+                                        <figure><img src="assets/images/NewU-InscribeX-img/image14.png"></figure>
+
+
+                                        <h3>Other Functional Requirements</h3>
+                                        <ul>
+                                            <li>The website should support features such as staking, lending, and group
+                                                chats.</li>
+                                            <li>Users should be able to search for and bookmark cryptocurrencies.</li>
+                                            <li>Users should be able to edit their usernames.</li>
+                                        </ul>
+                                    </section>
+
+                                    <!-- Non-Functional Requirements Section -->
+                                    <section id="non-functional-requirements">
+                                        <h2>Non-Functional Requirements</h2>
+                                        <ul>
+                                            <li><strong>Security:</strong> Users should be able to connect their wallet
+                                                to the website securely and have secure one-on-one conversations over
+                                                chat features. Priority: High</li>
+                                            <li><strong>Scalability:</strong> Design the system to support future
+                                                expansions and feature integrations, such as new extensions or services.
+                                                Priority: High</li>
+                                            <li><strong>Safety:</strong> Implement measures to prevent users from
+                                                accidental transactions, such as confirmation dialogs for trades and
+                                                transfers. Priority: High</li>
+                                            <li><strong>Maintainability:</strong> The system should provide
+                                                comprehensive logging and monitoring tools. Priority: Medium</li>
+                                            <li><strong>Performance:</strong> Ensure the system can handle high volumes
+                                                of transactions quickly, aiming for processing within seconds. Priority:
+                                                Medium</li>
+                                            <li><strong>Usability:</strong> The user interface should be intuitive and
+                                                accessible. Priority: Medium</li>
+                                            <li><strong>Portability:</strong> Ensure the platform is compatible across
+                                                different operating systems, devices, and browsers. Users should be able
+                                                to interact with the marketplace smoothly. Priority: Low</li>
+                                            <li><strong>Robustness:</strong> The system should handle incorrect,
+                                                unexpected, or corrupt data inputs gracefully, providing useful error
+                                                messages. Priority: Low</li>
+                                            <li><strong>Sustainability:</strong> Optimize resource usage to minimize
+                                                energy consumption. Priority: Low</li>
+                                        </ul>
+                                    </section>
+
+
+                                    <!-- Constraints and Assumptions Section -->
+                                    <section id="constraints">
+                                        <h2>Constraints and Assumptions</h2>
+                                        <ul>
+                                            <li><b>Firebase</b> is now required for data storage. This decision stems
+                                                from
+                                                NewU's commitment to long-term use of Firebase despite its associated
+                                                costs.</li>
+                                            <li>Typescript to JavaScript translation remains a key challenge due to the
+                                                current dependency on JavaScript and the dilemma of translating or
+                                                transitioning fully to TypeScript.</li>
+                                            <li>The team has limited experience in frontend design, creating challenges
+                                                in the current development phase.</li>
+                                            <li>The provided Figma design, developed by another team, is assumed to meet
+                                                the sponsor's requirements and largely align with the final design
+                                                vision.</li>
+                                            <li>Integration of the Avalanche Subnet is anticipated to reduce gas fees
+                                                significantly for the marketplace but is contingent on acquiring further
+                                                understanding of the Avalanche API.</li>
+                                            <li>All login and chat features are assumed to be centralized, despite
+                                                discussions around decentralization.</li>
+                                            <li><b>China</b> users will be able to access the app using a VPN, even
+                                                though
+                                                Firebase is banned in China.</li>
+                                            <li>Desktop Chrome is assumed to be the primary platform for users,
+                                                simplifying development and leveraging Chrome's extensive extensions.
+                                            </li>
+                                        </ul>
+                                    </section>
+
+
+                                    <!-- UI Design Section -->
+                                    <section id="ui-design">
+                                        <h2>UI Design</h2>
+                                        <p>This section includes mockups, wireframes, and sitemaps for the following
+                                            pages:</p>
+                                        <ul>
+                                            <li><strong>Home Page</strong>: Features a user-friendly interface that
+                                                highlights key functionalities, including navigation to the marketplace,
+                                                staking, and community chat.</li>
+                                            <figure><img src="assets/images/NewU-InscribeX-img/image20.png"></figure>
+                                            <li><strong>Login Page</strong>: A secure page allowing users to connect
+                                                their wallets, which serves as the primary login method.</li>
+                                            <figure><img src="assets/images/NewU-InscribeX-img/image12.png"></figure>
+                                            <li><strong>Chat Tab in Community Page</strong>: Displays the global chat by
+                                                default, with options to add friends, access private chats, and create
+                                                group chats.</li>
+                                            <figure><img src="assets/images/NewU-InscribeX-img/image24.png"></figure>
+                                            <li><strong>Friend Tab in Community Page</strong>: Allows users to manage
+                                                their friend list, add new friends, and initiate private conversations.
+                                            </li>
+                                            <figure><img src="assets/images/NewU-InscribeX-img/image18.png"></figure>
+                                            <li><strong>Create Group Chat</strong>: Includes a popup interface for
+                                                selecting friends and naming the group chat.</li>
+                                            <figure><img src="assets/images/NewU-InscribeX-img/image15.png"></figure>
+                                            <li><strong>User Profile Page</strong>: Enables users to view and edit their
+                                                username and profile picture.</li>
+                                            <figure><img src="assets/images/NewU-InscribeX-img/image21.png"></figure>
+                                            <figure><img src="assets/images/NewU-InscribeX-img/image22.png"></figure>
+                                            <li><strong>Marketplace Page</strong>: Features item listings, search
+                                                functionality, and a detailed view of cryptocurrency tokens available
+                                                for purchase or bid.</li>
+                                            <figure><img src="assets/images/NewU-InscribeX-img/image11.png"></figure>
+                                            <li><strong>Detailed Cryptocurrency Token Page</strong>: Provides
+                                                comprehensive information about a selected cryptocurrency token,
+                                                including price trends, bid options, and related transactions.</li>
+                                            <figure><img src="assets/images/NewU-InscribeX-img/image10.png"></figure>
+                                            <li><strong>Bid Page</strong>: Dedicated page for submitting bids on
+                                                selected assets in the marketplace.</li>
+                                            <figure><img src="assets/images/NewU-InscribeX-img/image19.png"></figure>
+                                        </ul>
+                                        <p>Each design ensures intuitive navigation, accessibility, and usability across
+                                            desktop and mobile platforms, adhering to the project's goals and
+                                            assumptions as outlined in the constraints section.</p>
+                                    </section>
+
+                                    <!-- Secret Storyboards Section -->
+                                    <div class="storyboards-section">
+                                        <h3 style="cursor: pointer;" onclick="toggleStoryboards()"
+                                            class="secret-toggle">
+                                            🤫 Found a Secret! <span id="storyboardToggle">[Click if you dare...]</span>
+                                        </h3>
+                                        <div id="storyboardContent" style="display: none;">
+                                            <p class="secret-text"
+                                                style="text-align: center; font-style: italic; color: #666;">
+                                                You've discovered our super secret hand-drawn storyboards!
+                                                These rare artifacts were sketched in the dead of night...
+                                            </p>
+                                            <figure>
+                                                <img src="assets/images/NewU-InscribeX-img/image17.png"
+                                                    alt="Secret Storyboard 1"
+                                                    style="transform: rotate(-2deg); box-shadow: 3px 3px 10px rgba(0,0,0,0.2);">
+                                            </figure>
+                                            <figure>
+                                                <img src="assets/images/NewU-InscribeX-img/image13.png"
+                                                    alt="Secret Storyboard 2"
+                                                    style="transform: rotate(1deg); box-shadow: 3px 3px 10px rgba(0,0,0,0.2);">
+                                            </figure>
+                                            <p class="secret-text"
+                                                style="text-align: center; font-style: italic; color: #666;">
+                                                Congratulations! You're one of the few who've seen these sacred
+                                                sketches.
+                                                Now quick, close this before anyone else sees! 🙈
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p> </p>
+                                    <script>
+                                        function toggleStoryboards() {
+                                            const content = document.getElementById('storyboardContent');
+                                            const toggle = document.getElementById('storyboardToggle');
+                                            if (content.style.display === 'none') {
+                                                content.style.display = 'block';
+                                                toggle.textContent = '[Quick, hide it!]';
+                                            } else {
+                                                content.style.display = 'none';
+                                                toggle.textContent = '[Click if you dare...]';
+                                            }
+                                        }
+                                    </script>
+                                    <!-- Software Design Section -->
+                                    <section id="software-design">
+                                        <h2>Software Design</h2>
+
+                                        <!-- UML Documentation -->
+                                        <h3>UML Sequence Diagram</h3>
+                                        <figure><img src="assets/images/NewU-InscribeX-img/image25.png"></figure>
+                                        <p>
+                                            This UML sequence diagram describes the important use case of communicating
+                                            with other users.
+                                            The main actor of this diagram is the user who must first login by
+                                            connecting to their web3.0 wallet.
+                                            Otherwise, the user is not able to communicate with other users and is only
+                                            able to read messages from the global chat.
+                                            The login is handled with an external extension which currently supports
+                                            Unisat and OKX.
+                                            A user’s login information, which consists of their wallet address and a
+                                            temporary username, is stored inside Firebase.
+                                        </p>
+                                        <p>
+                                            After the user is logged in, they are able to proceed to the community
+                                            feature by selecting the Chat button in the header.
+                                            The user is automatically able to view all the global chats and can now type
+                                            a message to send to the global chat.
+                                            Messages are sent to and stored inside Firebase. In addition, the user can
+                                            now select another user’s avatar to add them as a friend or go to the friend
+                                            tab inside the community page to add friends.
+                                            Once another user has been added as a friend, an individual chat will open
+                                            up to allow direct and private communication with the other user.
+                                            The user’s friend(s) are stored inside Firebase.
+                                        </p>
+                                        <figure><img src="assets/images/NewU-InscribeX-img/image5.png"></figure>
+
+                                        <!-- Database Documentation -->
+                                        <h3>Database Design</h3>
+                                        <figure><img src="assets/images/NewU-InscribeX-img/image7.png"></figure>
+                                        <p>
+                                            The database is a NoSQL design with Google’s Firebase as our database.
+                                            Firebase operates as a collection of documents,
+                                            and each document contains information similar to a SQL table’s rows
+                                            containing information in columns.
+                                            “By default, Cloud Firestore automatically maintains single-field indexes
+                                            for each field in a document and each subfield in a map.” (Google Cloud)
+                                            This characteristic helps for faster retrieval of data, which is one of the
+                                            main reasons we chose this service as our database.
+                                        </p>
+                                        <figure><img src="assets/images/NewU-InscribeX-img/image23.png"></figure>
+                                        <p>
+                                            The <b>users’</b> table is where we store our user information. In Firebase,
+                                            new
+                                            entries are generated as documents and are automatically given a
+                                            self-generated unique document for identification.
+                                            Normally this value has no meaningful purpose other than for identification,
+                                            but we’ve decided to make our own documentID.
+                                            The characteristics of web3.0 wallet addresses are that they are unique.
+                                            This is an important characteristic because no one wants their money to go
+                                            into another’s wallet accidentally,
+                                            both in virtual and in real life. This unique characteristic satisfies the
+                                            same uniqueness characteristics of the documentID.
+                                            With a known documentID, we can reach each user’s information faster instead
+                                            of querying it.
+                                            This is extremely convenient because when users log into their web3 wallet,
+                                            the first set of information we receive contains the walletAddress.
+                                            The users’ unique document is created upon their first login with their
+                                            wallet. Each wallet will have its own account.
+                                            While developing this table, one of the most important questions was how do
+                                            we allow users to change their username and profile picture.
+                                            There were two approaches to this problem, either we save it in one location
+                                            and have API calls from other functions that require profile pictures and
+                                            usernames, or we save it at all other tables like messages and update it
+                                            periodically.
+                                            Originally, we had the second approach since we were not going to include
+                                            the update user information functionality until the end.
+                                            As we approach the end of the development of the chat feature, we’re
+                                            starting to tackle this problem. In discussion with our CTO, he suggested
+                                            using the first approach to ensure the timeliness of the information.
+                                            We’re currently at a 50% milestone on implementing this change. Our biggest
+                                            setback is that the amount of API calls is too frequent.
+                                            We want to implement a Redis cache system to save time and money from
+                                            redundant API calls to the Firebase server.
+                                            Currently, we’ve shifted towards finishing all the functionalities before
+                                            coming back and optimizing with Redis.
+                                        </p>
+                                        <figure><img src="assets/images/NewU-InscribeX-img/image16.png"></figure>
+                                        <p>
+                                            The <b>global</b> table is where we store all the message information for
+                                            global
+                                            chats. Currently, we are only using one global chat,
+                                            but we have a vision that as we include more types of assets/cryptocurrency
+                                            on our subnet, every coin type will have its community global chat.
+                                            The global chats are documents that contain only one field, chatHistory, and
+                                            documentID as the name.
+                                            Since there is a set amount of global chats and users cannot freely create
+                                            them, it is logical to use the name as the documentID.
+                                            We are only storing chatHistory because, by the definition of global chat,
+                                            everyone can type in it.
+                                            There isn’t a meaningful purpose in storing a list of users or other
+                                            information as it will also slow down the database that is already in high
+                                            demand.
+                                            This is not currently a big issue right now, but as the number of users
+                                            increases, it will slow down the loading time of the chat page if every user
+                                            needs to be displayed for each global chat.
+                                            The chatHistory is an array of messages with the format indicated by the
+                                            message table in the diagram.
+                                            For future development, there are plans to store only the key identification
+                                            walletAddress in the message object,
+                                            but it is in low priority since the mass amount of messages in the global
+                                            chat would already dilute the significance of who wrote the message.
+                                            In addition, it is also not realistic to implement until a cache system is
+                                            set up where usernames and profile pictures are easily and cheaply acquired.
+                                        </p>
+                                        <figure><img src="assets/images/NewU-InscribeX-img/image1.png"></figure>
+                                        <p>
+                                            Moving on to the <b>messages</b> table which is a placeholder for a message
+                                            object, we can use it to further develop and brainstorm ideas for creating
+                                            different types of chats. By default, the database has a single global chat
+                                            to which everyone has access to. Each individual message object has a few
+                                            key attributes that simplify development, with one of them being the user.
+                                            The user attribute of the message class allows for the identification of the
+                                            sender. This facilitates UI features such as displaying who sent the
+                                            message, querying the user instance for things like the avatar and username
+                                            to display, and, later on, the creation of a friends list for each user.
+                                            Similar to the reasoning for keeping track of a username, we also store the
+                                            wallet address associated with each message sent. This ensures that when
+                                            creating relationships between users, there will always be a unique
+                                            identifier to differentiate and verify security. Otherwise, if multiple
+                                            people have the same username, we can not accurately determine which user
+                                            they want to add friends with. Other attributes of the message class include
+                                            text, which is the actual content of the message sent, timestamp, which is
+                                            the time the message was sent, and id, allowing for the identification of
+                                            malicious messages later on in development.
+                                        </p>
+                                        <figure><img src="assets/images/NewU-InscribeX-img/image2.png"></figure>
+                                        <p>For the <b>friendsList</b> table, there are two attributes each allowing for
+                                            key functionalities related to different types of messaging and later on
+                                            direct trading. The unique identifier is the walletAddress which relates a
+                                            friendsList collection back to its respective user instance. The second
+                                            attribute is the friend's walletAddress, which allows the identification of
+                                            each friend within the list. This structure enables the system to
+                                            efficiently manage and retrieve a user’s friends, facilitating the creation
+                                            of private chats and enabling direct transactions between users. Each entry
+                                            in the friendList table represents a unique relationship between the user
+                                            and their friends, which provides a foundation for personalized
+                                            communication and trading features. The user’s friendsList document is
+                                            generated at their first login and the friendList field updates upon adding
+                                            more users as friends.
+                                        </p>
+                                        <figure><img src="assets/images/NewU-InscribeX-img/image8.png"></figure>
+                                        <p>
+                                            Once the friendList table has been created, the user can now create their
+                                            own chat room. This is related to the <b>individualChat</b> table. The
+                                            chatID is generated through the combination of the walletAddress of users
+                                            involved in a direct message. The messages here are stored in an array of
+                                            message objects referenced through their unique associated id. Both of these
+                                            design decisions allow for the messages to be managed more efficiently for
+                                            both users. After this class, it will facilitate the development of features
+                                            such as deleting or editing a message. Despite the name individualChat, an
+                                            instance of this class would also store a userList which is an array of
+                                            users. This allows the individualChat class to be reused for instances that
+                                            require a group chat. However, where they differ is the creation of an
+                                            instance of a groupChat instance. Individual documents are created upon
+                                            friend adds, the chatID will also serve as the documentID since two unique
+                                            values concatenated have a low chance of becoming non-unique. This means
+                                            that a unique individual chat conversation is created whenever a new user is
+                                            added as a friend. For future development, developers should look into valid
+                                            walletAddress characters and find a character that walletAddress will not
+                                            have and is accepted by Firebase as documentID and insert it in between the
+                                            two walletAddress to ensure uniqueness.
+                                        </p>
+                                        <figure><img src="assets/images/NewU-InscribeX-img/image6.png"></figure>
+                                        <p>
+                                            The <b>groupChatList</b> table is designed to manage and organize group
+                                            chats within the website’s Chat Page. Each entry in the table is linked to a
+                                            specific user through their unique walletAddress, which serves as the
+                                            primary identifier. This structure allows the system to efficiently track
+                                            and manage the group chats for each individual user. Within the
+                                            groupChatList table, the walletAddress attribute ties the back to the
+                                            respective user instance in the users table. The groupChatList attribute is
+                                            an array that holds multiple chatID values, each representing a unique group
+                                            chat that the user is a member of. These chatID values are linked to the
+                                            groupChat table, where each chatID corresponds to a specific group chat
+                                            entry.
+                                        </p>
+                                        <figure><img src="assets/images/NewU-InscribeX-img/image4.png"></figure>
+                                        <p>
+                                            Lastly, the <b>groupChat</b> table is utilized to differentiate between a
+                                            group chat and an individual chat. It includes attributes such as chatID,
+                                            chatHistory, userList, and name. The chatID is a unique identifier for each
+                                            group chat, generated through a library called UUID and a chatHistory
+                                            attribute utilized similarly to individual chat. The charHistory is an array
+                                            of message objects. Each message object contains details like the sender's
+                                            walletAddress, the text of the message, the timestamp, the user, and unique
+                                            message id.
+                                        </p>
+
+                                        <!-- User Flow Documentation -->
+                                        <h3>User Flow Diagram</h3>
+                                        <figure><img src="assets/images/NewU-InscribeX-img/image9.png"></figure>
+                                        <p>
+                                            The User Flow Diagram illustrates the navigation paths within an application
+                                            starting from the initial page.
+                                            The process begins at the "Start" point and transitions to the "Home Page."
+                                            From the "Home Page," users can navigate to several different pages:
+                                            Staking Page, Borrow Land Page, Chat Page, BTCGPT Page. When a user
+                                            navigates to the "Chat Page," the page is only readable by default, which
+                                            restricts chat functionality until the user logs in.
+                                            To gain full access to chat features, the user must go through the "Login
+                                            Page" and connect their wallet.
+                                        </p>
+                                        <p>
+                                            At the "Wallet Connected" decision point: If the wallet is connected
+                                            ("Yes"), the user is able to chat and view the "Friend List" page,
+                                            granting full access to chat and friend list functionalities. If the wallet
+                                            is not connected ("No"), the user is redirected back to the "Chat readable
+                                            only" page.
+                                        </p>
+                                    </section>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="ds-footer text-center">
+        <div class="container">
+            <section>
+                <span>Stay in touch</span>
+                <h4>Ready to talk?</h4>
+                <p>Feel free to contact me</p>
+                <button id="copyEmailButton" class="ds-button" onclick="copyEmail()">Lets Talk</button>
+            </section>
+            <span class="ds-copyright">© 2024 All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        function copyEmail() {
+            const tempInput = document.createElement('input');
+            tempInput.value = 'lanceprofe@gmail.com';
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            const button = document.getElementById('copyEmailButton');
+            button.textContent = 'Shoot me an email, I copied it for ya!';
+        }
+    </script>
+</body>
+
+</html>
