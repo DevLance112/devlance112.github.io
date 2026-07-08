@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
@@ -35,8 +35,12 @@ function projectHref(project) {
   return `/projects/${project.slug}`;
 }
 
-function getRoute() {
-  const path = window.location.pathname.replace(/\/$/, "") || "/";
+function normalizePathname(pathname) {
+  return pathname.replace(/\/$/, "") || "/";
+}
+
+function getRouteFromPathname(pathname) {
+  const path = normalizePathname(pathname);
   if (path === "/") return { type: "landing" };
   if (path === "/portfolio") return { type: "home" };
   if (path === "/projects") return { type: "projects" };
@@ -47,7 +51,78 @@ function getRoute() {
   return { type: "landing" };
 }
 
-function usePortfolioMotion(rootRef, { opening = false } = {}) {
+function getRoute() {
+  return getRouteFromPathname(window.location.pathname);
+}
+
+function getRouteKey(route) {
+  return `${route.type}:${route.slug || ""}`;
+}
+
+function isPortfolioRoute(pathname) {
+  const path = normalizePathname(pathname);
+  return path === "/" || path === "/portfolio" || path === "/projects" || path.startsWith("/projects/");
+}
+
+function scrollToRouteTarget(hash) {
+  if (!hash) {
+    window.scrollTo({ top: 0, left: 0 });
+    return;
+  }
+
+  const target = document.getElementById(decodeURIComponent(hash.slice(1)));
+  if (target) target.scrollIntoView({ block: "start" });
+}
+
+function usePortfolioNavigation(rootRef, setRoute) {
+  useEffect(() => {
+    const root = rootRef.current;
+    if (!root) return undefined;
+
+    function handleClick(event) {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      if (!(event.target instanceof Element)) return;
+
+      const anchor = event.target.closest("a[href]");
+      if (!anchor || !root.contains(anchor)) return;
+      if (anchor.target && anchor.target !== "_self") return;
+      if (anchor.hasAttribute("download")) return;
+
+      let url;
+      try {
+        url = new URL(anchor.getAttribute("href"), window.location.href);
+      } catch {
+        return;
+      }
+
+      if (url.origin !== window.location.origin || !isPortfolioRoute(url.pathname)) return;
+
+      event.preventDefault();
+
+      const nextUrl = `${url.pathname}${url.search}${url.hash}`;
+      const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+      if (nextUrl !== currentUrl) window.history.pushState({}, "", nextUrl);
+
+      setRoute(getRouteFromPathname(url.pathname));
+      requestAnimationFrame(() => scrollToRouteTarget(url.hash));
+    }
+
+    function handlePopState() {
+      setRoute(getRoute());
+      requestAnimationFrame(() => scrollToRouteTarget(window.location.hash));
+    }
+
+    root.addEventListener("click", handleClick);
+    window.addEventListener("popstate", handlePopState);
+
+    return () => {
+      root.removeEventListener("click", handleClick);
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, [rootRef, setRoute]);
+}
+
+function usePortfolioMotion(rootRef, { opening = false, routeKey = "" } = {}) {
   useLayoutEffect(() => {
     const root = rootRef.current;
     if (!root) return undefined;
@@ -370,7 +445,7 @@ function usePortfolioMotion(rootRef, { opening = false } = {}) {
       document.body.style.overflow = "";
       ctx.revert();
     };
-  }, [rootRef, opening]);
+  }, [rootRef, opening, routeKey]);
 }
 
 function OpeningAnimation() {
@@ -1049,14 +1124,16 @@ function HomePage() {
 
 export default function App() {
   const rootRef = useRef(null);
-  const route = getRoute();
-  usePortfolioMotion(rootRef, { opening: route.type === "landing" });
+  const [route, setRoute] = useState(getRoute);
+  const currentRouteKey = getRouteKey(route);
+  usePortfolioNavigation(rootRef, setRoute);
+  usePortfolioMotion(rootRef, { opening: route.type === "landing", routeKey: currentRouteKey });
   const currentProject = route.type === "project" ? projects.find((project) => project.slug === route.slug) : null;
 
   return (
     <div className="portfolio-root" ref={rootRef}>
       {route.type === "landing" && <OpeningAnimation />}
-      <main className="site-shell">
+      <main className="site-shell" key={currentRouteKey}>
         {route.type === "landing" && <LandingPage />}
         {route.type === "projects" && <ProjectsArchive />}
         {route.type === "project" && <ProjectDetail project={currentProject} />}
