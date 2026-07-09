@@ -1,6 +1,6 @@
 export const contact = {
   email: "lanceprofe@gmail.com",
-  phone: "(415) 519-1480",
+  phone: "(470) 222-5231",
   location: "Bay Area, CA",
   linkedin: "https://www.linkedin.com/in/lance-li-3158aa142/",
   github: "https://github.com/DevLance112",
