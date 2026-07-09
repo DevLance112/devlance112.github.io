@@ -4,7 +4,7 @@ export const contact = {
   location: "Bay Area, CA",
   linkedin: "https://www.linkedin.com/in/lance-li-3158aa142/",
   github: "https://github.com/DevLance112",
-  resume: "/assets/files/lance-li-resume-2026.pdf",
+  resume: "/assets/files/lance-li-resume-2026.pdf?v=20260708",
 };
 
 export const metrics = [
@@ -21,7 +21,7 @@ export const timeline = [
     date: "Jan 2026 - Present",
     type: "Health Care Academy / Workforce operations",
     detail:
-      "Leads Health Care Academy operations for 82 students through SOP design, curriculum oversight, stakeholder coordination, and graduate placement tracking.",
+      "Leads Health Care Academy operations for 82 students through SOP design, curriculum oversight, and stakeholder coordination, supporting an 88% graduation rate and a 95% work placement rate.",
   },
   {
     role: "Career Advisor",
@@ -32,7 +32,7 @@ export const timeline = [
       "Coordinated workforce support for 909 individuals and 792 successful employment placements, contributing to an 87% job placement rate.",
   },
   {
-    role: "Lead Developer and Founder",
+    role: "Lead Developer & Founder",
     company: "AI Secretary",
     date: "Aug 2024 - Present",
     type: "AI product / Service automation",
@@ -40,12 +40,12 @@ export const timeline = [
       "Builds an AI-powered resume builder and virtual secretary for job-description parsing, call screening, appointment scheduling, and calendar sync.",
   },
   {
-    role: "Team Lead and Administrative Coordinator",
+    role: "Team Lead / Project Coordinator",
     company: "NewU InscribeX",
     date: "Mar 2024 - Jul 2024",
     type: "Web3 product / Team delivery",
     detail:
-      "Directed a four-person, eight-week product cycle with schedules, stakeholder briefings, milestone reports, 100% on-time delivery, and reduced project risk.",
+      "Directed a four-person, eight-week product cycle with daily stand-ups, task assignments, stakeholder briefings, 100% on-time delivery, and reduced project risk.",
   },
 ];
 

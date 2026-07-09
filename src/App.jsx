@@ -7,6 +7,7 @@ import {
   BrainCircuit,
   Code2,
   Download,
+  FileText,
   Github,
   Linkedin,
   Mail,
@@ -43,6 +44,7 @@ function getRouteFromPathname(pathname) {
   const path = normalizePathname(pathname);
   if (path === "/") return { type: "landing" };
   if (path === "/portfolio") return { type: "home" };
+  if (path === "/resume") return { type: "resume" };
   if (path === "/projects") return { type: "projects" };
   if (path.startsWith("/projects/")) {
     const slug = path.split("/").filter(Boolean)[1];
@@ -61,7 +63,7 @@ function getRouteKey(route) {
 
 function isPortfolioRoute(pathname) {
   const path = normalizePathname(pathname);
-  return path === "/" || path === "/portfolio" || path === "/projects" || path.startsWith("/projects/");
+  return path === "/" || path === "/portfolio" || path === "/resume" || path === "/projects" || path.startsWith("/projects/");
 }
 
 function withInstantScroll(callback) {
@@ -549,12 +551,13 @@ function Nav({ current = "home" }) {
       </a>
       <nav className="nav-links" aria-label="Sections">
         <a href={isHome ? "#experience" : "/portfolio#experience"}>Experience</a>
+        <a href="/resume">Resume</a>
         <a href="/projects">All Work</a>
       </nav>
       <div className="nav-actions" aria-label="Portfolio actions">
-        <a className="nav-action nav-resume" href={contact.resume} download>
+        <a className="nav-action nav-resume" href={contact.resume} download="lance-li-resume-2026.pdf" aria-label="Download Lance Li resume PDF">
           <Download size={18} aria-hidden="true" />
-          <span>Resume</span>
+          <span>PDF</span>
         </a>
         <a className="nav-action nav-icon-link" href={contact.linkedin} target="_blank" rel="noreferrer" aria-label="Open Lance Li on LinkedIn">
           <Linkedin size={18} aria-hidden="true" />
@@ -583,7 +586,7 @@ function LandingPage() {
         </a>
         <div className="landing-nav-links">
           <a href="/projects">Archive</a>
-          <a href={contact.resume} download>Resume</a>
+          <a href="/resume">Resume</a>
           <a href={contact.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
           <a href={`mailto:${contact.email}`}>Contact</a>
         </div>
@@ -668,9 +671,9 @@ function Hero() {
               <span>View selected work</span>
               <ArrowRight size={19} aria-hidden="true" />
             </a>
-            <a className="secondary-action" href={`mailto:${contact.email}`}>
-              <Mail size={18} aria-hidden="true" />
-              <span>{contact.email}</span>
+            <a className="secondary-action" href="/resume">
+              <FileText size={18} aria-hidden="true" />
+              <span>View resume</span>
             </a>
           </div>
         </div>
@@ -765,6 +768,57 @@ function Experience() {
         </div>
       </div>
     </section>
+  );
+}
+
+function ResumePage() {
+  return (
+    <>
+      <section className="resume-section section-band" id="resume" data-motion-section>
+        <Nav current="resume" />
+        <SectionTitle>Resume</SectionTitle>
+        <div className="section-inner resume-layout">
+          <div className="resume-copy">
+            <p className="section-kicker" data-reveal-copy>Resume</p>
+            <h2 data-reveal-copy>Lance Li Resume</h2>
+            <div className="resume-actions">
+              <a className="primary-action" href={contact.resume} target="_blank" rel="noreferrer" data-reveal-card>
+                <FileText size={19} aria-hidden="true" />
+                <span>Open resume</span>
+              </a>
+              <a className="secondary-action" href={contact.resume} download="lance-li-resume-2026.pdf" data-reveal-card>
+                <Download size={18} aria-hidden="true" />
+                <span>Download PDF</span>
+              </a>
+            </div>
+          </div>
+          <aside className="resume-viewer" data-reveal-card aria-label="Embedded resume preview">
+            <div className="resume-viewer-toolbar">
+              <span>Lance Li Resume</span>
+              <a href={contact.resume} target="_blank" rel="noreferrer" aria-label="Open resume in a new browser tab">
+                <ArrowUpRight size={18} aria-hidden="true" />
+              </a>
+            </div>
+            <object
+              className="resume-object"
+              data={`${contact.resume}#toolbar=0&navpanes=0&view=FitH`}
+              type="application/pdf"
+              aria-label="Lance Li resume PDF preview"
+            >
+              <div className="resume-fallback">
+                <FileText size={32} aria-hidden="true" />
+                <p>PDF preview is unavailable in this browser.</p>
+                <a className="text-link" href={contact.resume} target="_blank" rel="noreferrer">
+                  Open resume
+                  <ArrowUpRight size={18} aria-hidden="true" />
+                </a>
+              </div>
+            </object>
+          </aside>
+        </div>
+      </section>
+      <ContactFooter />
+    </>
   );
 }
 
@@ -1186,6 +1240,7 @@ export default function App() {
       {route.type === "landing" && <OpeningAnimation />}
       <main className="site-shell" key={currentRouteKey}>
         {route.type === "landing" && <LandingPage />}
+        {route.type === "resume" && <ResumePage />}
         {route.type === "projects" && <ProjectsArchive />}
         {route.type === "project" && <ProjectDetail project={currentProject} />}
         {route.type === "home" && <HomePage />}
