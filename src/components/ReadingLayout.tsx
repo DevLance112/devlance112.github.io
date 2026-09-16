@@ -1,4 +1,5 @@
 import { useEffect, useId, useRef, useState, type ReactNode } from 'react';
+import { Minus, Plus } from 'lucide-react';
 import type { Section, Source } from '../content/types';
 
 const KEYWORDS = new Set(
@@ -188,7 +189,7 @@ export function ReadingLayout({ sections, children }: { sections: Section[]; chi
       <div ref={progressRef} className="reading-progress" role="progressbar" aria-label="Reading progress" aria-valuemin={0} aria-valuemax={100} aria-valuenow={0} style={{ transform: 'scaleX(0)' }} />
       <div className="reading-layout">
         <aside className="reading-toc">
-          <button className="toc-toggle" aria-expanded={tocOpen} aria-controls={tocId} onClick={() => setTocOpen(open => !open)}>On this page <span aria-hidden="true">{tocOpen ? '−' : '+'}</span></button>
+          <button className="toc-toggle" aria-expanded={tocOpen} aria-controls={tocId} onClick={() => setTocOpen(open => !open)}>On this page {tocOpen ? <Minus aria-hidden="true" focusable="false"/> : <Plus aria-hidden="true" focusable="false"/>}</button>
           <nav id={tocId} data-open={tocOpen} aria-label="On this page">
             <p className="toc-label">On this page</p>
             <ol>

@@ -7,6 +7,7 @@ export const pages = [
   { path: '/work', title: 'Work & case studies — Lance Li', description: 'Explore Lance Li’s engineering and delivery work: the problem, the constraints, the decisions, and what was built.' },
   { path: '/writing', title: 'Writing & field notes — Lance Li', description: 'Notes on AI applications, full-stack systems, product decisions, and the work of moving from an unclear problem to a useful solution.' },
   { path: '/about', title: 'About & experience — Lance Li', description: 'Lance Li’s background across software engineering, AI applications, workforce operations, and cross-functional project delivery.' },
+  { path: '/resume', title: 'Resume — Lance Li', description: 'Explore Lance Li’s experience, education, and skills across engineering, AI applications, and project delivery. Download the PDF resume.' },
   { path: '/contact', title: 'Contact — Lance Li', description: 'Get in touch with Lance Li about full-stack engineering, AI applications, technical collaboration, and product delivery.' },
   ...projects.map((project) => ({ path: `/work/${project.slug}`, title: `${project.title} — Case study — Lance Li`, description: project.summary, kind: 'project', slug: project.slug })),
   ...articles.map((article) => ({ path: `/writing/${article.slug}`, title: `${article.title} — Lance Li`, description: article.summary, kind: 'article', slug: article.slug })),
@@ -15,7 +16,6 @@ export const pages = [
 export const redirects = [
   { path: '/portfolio', target: '/' },
   { path: '/projects', target: '/work' },
-  { path: '/resume', target: '/about' },
   ...projects.map((project) => ({ path: `/projects/${project.slug}`, target: `/work/${project.slug}` })),
 ];
 
