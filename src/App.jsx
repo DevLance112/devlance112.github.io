@@ -696,20 +696,6 @@ function Experience() {
     <section className="experience section-band" id="experience" data-motion-section>
       <SectionTitle>Experience</SectionTitle>
       <div className="section-inner experience-grid">
-        <div className="media-column">
-          <div className="portrait-wrap image-reveal" data-image-reveal>
-            <img src="/assets/avatar-lance.png" alt="Abstract portrait for Lance Li" />
-            <span className="image-curtain" aria-hidden="true" />
-          </div>
-          <figure className="motion-frame image-reveal" data-image-reveal>
-            <img src="/assets/motion-still.png" alt="Abstract motion system still" />
-            <span className="image-curtain" aria-hidden="true" />
-            <figcaption>
-              <span>Signal study</span>
-              <span>AI workflow / operations system</span>
-            </figcaption>
-          </figure>
-        </div>
         <div className="about-copy">
           <p className="section-kicker" data-reveal-copy>Experience</p>
           <h2 data-reveal-copy>Operational leadership backed by full-stack execution.</h2>
@@ -738,6 +724,21 @@ function Experience() {
               </div>
             ))}
           </div>
+          <div className="skills-matrix" data-reveal-card>
+            {skillStacks.map((stack) => (
+              <article className="skill-stack" key={stack.title}>
+                <h3>{stack.title}</h3>
+                <div>
+                  {stack.skills.map((skill) => (
+                    <span key={skill}>{skill}</span>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+        <div className="experience-timeline" aria-label="Career timeline">
+          <p className="section-kicker" data-reveal-copy>Career timeline</p>
           <div className="timeline">
             {timeline.map((item) => (
               <article className="timeline-item" key={`${item.company}-${item.role}`} data-reveal-card>
@@ -749,18 +750,6 @@ function Experience() {
                   <span>{item.company}</span>
                   <strong>{item.type}</strong>
                   <p>{item.detail}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-          <div className="skills-matrix" data-reveal-card>
-            {skillStacks.map((stack) => (
-              <article className="skill-stack" key={stack.title}>
-                <h3>{stack.title}</h3>
-                <div>
-                  {stack.skills.map((skill) => (
-                    <span key={skill}>{skill}</span>
-                  ))}
                 </div>
               </article>
             ))}
