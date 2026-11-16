@@ -38,6 +38,7 @@ export interface Project {
   status: string;
   featured: boolean;
   coverImage?: ContentImage;
+  snapshot?: ContentImage & { width: number; height: number };
   outcome: string;
   sections: Section[];
   relatedArticles: string[];

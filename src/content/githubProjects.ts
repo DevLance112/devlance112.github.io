@@ -3,6 +3,7 @@ import type { Project } from './types';
 export const githubProjects: Project[] = [
   {
     slug: 'client-management-workspace',
+    snapshot: {"src":"/assets/projects/client-management-workspace.jpg","alt":"Case Note Manager workday calendar and task queue with fictional participants","caption":"Workday design prototype with fictional demo data.","width":1265,"height":712},
     title: 'Client Management Workspace',
     subtitle: 'From intake to follow-up in one desktop workspace',
     summary: 'A desktop application connecting client intake, case notes, editable PDF forms, and follow-up scheduling in a local workspace.',
@@ -41,10 +42,11 @@ export const githubProjects: Project[] = [
   },
   {
     slug: 'personal-planner',
+    snapshot: {"src":"/assets/projects/personal-planner.jpg","alt":"Personal Planner Today dashboard with task capture and daily progress","caption":"Personal Planner development build with fictional sample tasks.","width":1280,"height":720},
     title: 'Personal Planner',
     subtitle: 'Capture, sequence, and focus on the next task',
     summary: 'A local planner combining tasks, dependencies, recurring work, calendars, and focus sessions, with optional voice-assisted capture.',
-    problem: 'Turn a growing task list into a clear sequence of work and focused time to do it.',
+    problem: 'Make the next task clear, account for dependencies, and set aside focused time to work.',
     role: 'Full-stack development',
     team: '',
     date: '2026',
@@ -54,17 +56,17 @@ export const githubProjects: Project[] = [
     techStack: ['React', 'TypeScript', 'FastAPI', 'SQLite'],
     status: 'Working application',
     featured: true,
-    outcome: 'A planner with saved task views, sub-tasks, dependencies, recurring schedules, workflow rules, and focus-session history in a local database.',
+    outcome: 'A planner with saved task views, subtasks, dependencies, recurring schedules, workflow rules, and focus-session history in a local database.',
     relatedArticles: [],
     sources: [],
     sections: [
       {
         id: 'overview', title: 'One plan, several useful views',
-        paragraphs: ['Personal Planner connects task capture to daily execution. Tasks can be organized by category and priority, scheduled on a calendar, broken into sub-tasks, and revisited through saved list or board views. Each view works with the same underlying tasks.'],
+        paragraphs: ['Personal Planner connects task capture to daily execution. Tasks can be organized by category and priority, scheduled on a calendar, broken into subtasks, and revisited through saved list or board views. Each view works with the same underlying tasks.'],
       },
       {
         id: 'dependencies', title: 'Make the sequence visible',
-        paragraphs: ['Dependencies show both what a task is waiting on and what it unlocks. Blocked tasks stay editable, while starting work or entering focus mode waits for their prerequisites. Sub-task progress remains visible on the parent, and removing a parent preserves its steps as standalone tasks.'],
+        paragraphs: ['Dependencies show both what a task is waiting on and what it unlocks. Blocked tasks stay editable, while starting work or entering focus mode waits for their prerequisites. Subtask progress remains visible on the parent, and removing a parent preserves its steps as standalone tasks.'],
       },
       {
         id: 'focus-and-routines', title: 'Build repeatable work habits',
@@ -79,6 +81,7 @@ export const githubProjects: Project[] = [
   },
   {
     slug: 'ai-business-receptionist',
+    snapshot: {"src":"/assets/projects/ai-business-receptionist.jpg","alt":"Business receptionist dashboard with appointments, conversation history, and setup controls","caption":"Receptionist dashboard from a clean local build.","width":1265,"height":1325},
     title: 'AI Business Receptionist',
     subtitle: 'Connect a conversation to a dependable booking workflow',
     summary: 'A business receptionist prototype combining local speech processing, conversational assistance, and deterministic appointment booking.',
@@ -89,7 +92,7 @@ export const githubProjects: Project[] = [
     duration: '',
     category: 'AI & Automation',
     tags: ['Voice interfaces', 'Appointment booking', 'Local speech'],
-    techStack: ['Python', 'Flask', 'SQLite', 'DeepSeek', 'Whisper', 'Kokoro', 'Telnyx'],
+    techStack: ['Python', 'Flask', 'SQLite', 'DeepSeek', 'faster-whisper', 'Kokoro', 'Telnyx'],
     status: 'Development preview',
     featured: true,
     outcome: 'A dashboard, booking engine, conversational tools, and local speech pipeline, with a telephony adapter prepared for controlled live-call testing.',
@@ -98,7 +101,7 @@ export const githubProjects: Project[] = [
     sections: [
       {
         id: 'overview', title: 'Make appointments through conversation',
-        paragraphs: ['The receptionist uses a business profile, opening hours, services, and timezone to answer appointment requests. An owner dashboard manages those settings alongside bookings, transcripts, and calendar exports.'],
+        paragraphs: ['The receptionist uses a business profile, opening hours, services, and time zone to answer appointment requests. An owner dashboard manages those settings alongside bookings, transcripts, and calendar exports.'],
       },
       {
         id: 'booking', title: 'Keep availability deterministic',
@@ -106,7 +109,7 @@ export const githubProjects: Project[] = [
       },
       {
         id: 'speech', title: 'Separate speech from the calendar',
-        paragraphs: ['Whisper transcribes speech locally and Kokoro generates spoken replies. A Telnyx adapter connects inbound calls and audio streaming to the application. Keeping speech processing separate from the dashboard lets the conversation and booking workflow be exercised independently.'],
+        paragraphs: ['faster-whisper transcribes speech locally and Kokoro generates spoken replies. A Telnyx adapter connects inbound calls and audio streaming to the application. Keeping speech processing separate from the dashboard lets the conversation and booking workflow be exercised independently.'],
         diagram: { title: 'Appointment workflow', nodes: ['Caller request', 'Conversation tools', 'Availability check', 'Confirmed booking'], caption: 'Application logic owns the calendar; the conversation uses explicit tools.' },
       },
       {
@@ -117,6 +120,7 @@ export const githubProjects: Project[] = [
   },
   {
     slug: 'echo-portrait',
+    snapshot: {"src":"/assets/projects/echo-portrait.jpg","alt":"Echo portrait studio setup interface","caption":"Echo frontend preview; generation services are offline in this capture.","width":1265,"height":712},
     title: 'Echo Portrait',
     subtitle: 'A reusable talking-portrait studio on Apple Silicon',
     summary: 'An experimental studio that combines a portrait, voice references, and a prepared persona into an ongoing spoken conversation.',
@@ -150,12 +154,13 @@ export const githubProjects: Project[] = [
   },
   {
     slug: 'racing-game-agents',
+    snapshot: {"src":"/assets/projects/racing-game-agents.png","alt":"Racing agent following a curved track in the Gymnasium environment","caption":"Frame from the team’s recorded combined-training agent run.","width":600,"height":400},
     title: 'Learning to Race',
     subtitle: 'Compare demonstration pre-training and reinforcement learning',
     summary: 'A team experiment comparing three training approaches for racing-game agents, with evaluation notebooks and recorded driving runs.',
     problem: 'Explore how a small set of driving demonstrations changes the behavior of a reinforcement-learning agent.',
     role: 'Academic project contributor',
-    team: 'Group research project',
+    team: 'Academic team project',
     date: '2023',
     duration: '',
     category: 'Machine Learning',
@@ -163,7 +168,7 @@ export const githubProjects: Project[] = [
     techStack: ['Python', 'Gymnasium', 'Stable-Baselines3', 'NumPy', 'Jupyter'],
     status: 'Completed academic project',
     featured: false,
-    outcome: 'Training and evaluation notebooks comparing a control agent, a demonstration-pretrained agent, and an agent combining pre-training with environment training.',
+    outcome: 'Training and evaluation notebooks comparing a control agent, an agent pre-trained on driving demonstrations, and an agent combining pre-training with environment training.',
     relatedArticles: [],
     sources: [{ label: 'Racing-agent code, notebooks, and recordings', href: 'https://github.com/DevLance112/Small-Scale-Machine-Learning-Approaches-in-Racing-Games' }],
     sections: [

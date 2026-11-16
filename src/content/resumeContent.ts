@@ -2,7 +2,7 @@
 // Kept separate from the shorter editorial summaries used on About.
 export const resumeAchievements: Record<string, string[]> = {
   'Project Coordinator': [
-    'Led the Health Care Academy team, designing and implementing a Standard Operating Procedure (SOP) to streamline operations and ensure consistency for future cohorts.',
+    'Led the Health Care Academy team, designing and implementing a standard operating procedure (SOP) to streamline operations and ensure consistency for future cohorts.',
     'Managed government-funded programming for 82 students, with an 88% graduation rate and a 95% work placement rate among graduates through targeted curriculum oversight and stakeholder coordination.',
   ],
   'Career Advisor': [
@@ -10,8 +10,8 @@ export const resumeAchievements: Record<string, string[]> = {
   ],
   'Lead Developer & Founder': [
     'Designed and developed a multifunctional AI-powered resume builder over 12-week cycles, featuring job description parsing and resume tailoring to match job requirements.',
-    'Architected and implemented a PostgreSQL database with Strapi v5, designing schema for scalability and data integrity and hosting on Render.com.',
-    'Initiated an AI-powered virtual secretary to handle incoming calls, screen unwanted callers, schedule appointments, and sync with the user’s calendar; passed 80% of manual testing cases.',
+    'Architected and implemented a PostgreSQL database with Strapi v5, designing a schema for scalability and data integrity, with hosting on Render.com.',
+    'Initiated an AI-powered virtual secretary to handle incoming calls, screen unwanted callers, schedule appointments, and sync with the user’s calendar. The prototype passed 80% of manual test cases.',
   ],
   'Team Lead / Project Coordinator': [
     'Directed a 4-person cross-functional team during an 8-week product development cycle, coordinating daily stand-ups, task assignments, and progress check-ins to maintain timeline adherence and productivity.',

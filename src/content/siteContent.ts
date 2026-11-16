@@ -100,10 +100,10 @@ export const projects: Project[] = [
       section('final-solution', 'Final Solution', [
         'The resume builder uses a React frontend for form handling, modular components, job-description parsing, AI-generated section suggestions, and real-time preview. PostgreSQL stores structured data under a Strapi v5 layer, with Render used for hosting.',
         'The secretary workflow covers incoming calls, unwanted-caller screening, scheduling, and calendar synchronization.',
-      ], { bullets: ['Resume workflow: job requirements → suggestions → editable resume → preview.', 'Data layer: PostgreSQL schema supervised through Strapi v5.', 'Secretary workflow: call handling, screening, appointment scheduling, and calendar sync.'] }),
+      ], { bullets: ['Resume workflow: job requirements → suggestions → editable resume → preview.', 'Data layer: PostgreSQL schema managed through Strapi v5.', 'Secretary workflow: call handling, screening, appointment scheduling, and calendar sync.'] }),
       section('delivery', 'Delivery', [
         'Development combined planning, implementation, regular testing, optimization, and feedback. The resume builder reached final testing and launch preparation.',
-        'The virtual secretary passed 80% of manual testing cases.',
+        'The virtual secretary passed 80% of manual test cases.',
       ]),
       section('outcome', 'Outcome', [
         'The resume builder reached final testing, and the related secretary workflow underwent manual evaluation.',
@@ -115,6 +115,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'newu-inscribex',
+    snapshot: {"src":"/assets/legacy/NewU-InscribeX-img/image20.png","alt":"NewU marketplace landing page with search, wallet connection, and Explore and Create actions","caption":"Archived NewU marketplace interface.","width":1999,"height":1250},
     title: 'NewU InscribeX',
     subtitle: 'Giving a broad Web3 product a delivery structure',
     summary: 'A sponsored communication platform connecting wallet identity, messaging, and marketplace flows, with explicit requirements and a small-team delivery cadence.',
@@ -193,6 +194,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'movie-browser',
+    snapshot: {"src":"/assets/legacy/frontPage2.JPG","alt":"Movie catalog with sortable title and rating columns and add-to-cart controls","caption":"Movie catalog from the original web application.","width":982,"height":1312},
     title: 'Movie Browsing Website',
     subtitle: 'A full-stack service, from imported data to search',
     summary: 'A Java servlet application that brings together XML imports, MySQL search, authentication, session handling, cloud deployment, and an Android client.',
@@ -284,6 +286,7 @@ function archiveSections(input: { context: string; problem: string; constraints:
 projects.push(
   {
     slug: 'webcrawler-indexer-ranker', title: 'Webcrawler, Indexer, Ranker', subtitle: 'Search fundamentals under a storage constraint',
+    snapshot: {"src":"/assets/legacy/WebCrawler-Indexer-Ranker.JPG","alt":"Search-engine terminal displaying a query, ranked URLs, and timing output","caption":"Command-line search output from the academic search-engine project.","width":518,"height":328},
     summary: 'A six-week academic search engine covering bounded crawling, duplicate detection, disk-backed indexing, and ranked retrieval.',
     problem: 'Retrieve relevant pages without loading the entire postings index into memory.',
     role: 'Search systems contributor', team: 'Lance Li, Anthony Wen, Van Pham, and Aileen Tran; guided by Professor Alberto Krone-Martins',
@@ -305,6 +308,7 @@ projects.push(
   },
   {
     slug: 'pantry-pal', title: 'Pantry Pal', subtitle: 'Recommendations shaped by inventory and timing',
+    snapshot: {"src":"/assets/legacy/PantryPalFrontPage.JPG","alt":"Pantry Pal recipe screen with recommended and liked recipes","caption":"Recipe screen from the Flutter prototype.","width":559,"height":1065},
     summary: 'A mobile recipe prototype that ranks meals using available ingredients, preferences, preparation time, and eating patterns.',
     problem: 'Recommend a practical meal based on what someone has and when they need to start cooking.',
     role: 'Mobile product contributor', team: '', date: '2023', duration: '',
@@ -326,6 +330,7 @@ projects.push(
   },
   {
     slug: 'ocr-translate', title: 'OCR & Translate', subtitle: 'A small tool with a visible processing pipeline',
+    snapshot: {"src":"/assets/legacy/ORC%20and%20translate-web.PNG","alt":"OCR and Translate showing English source text beside Chinese translations","caption":"Original web prototype displaying line-by-line translation.","width":2520,"height":1197},
     summary: 'An image-to-text translation tool with an upload preview, language controls, and side-by-side original and translated lines.',
     problem: 'Help a user compare extracted text and translation without switching between separate tools.',
     role: 'Application developer', team: '', date: '2024', duration: '',
@@ -375,7 +380,7 @@ export const articles: Article[] = [
     editorialNote: '',
     sections: [
       section('the-change', 'A small feature changes the data problem', [
-        'A chat message needs a sender. In the NewU InscribeX archive, messages included wallet-linked identity alongside display information such as a username and profile picture. That was workable while profile editing remained later in the plan.',
+        'A chat message needs a sender. In the NewU InscribeX archive, messages included wallet-linked identity alongside display information such as a username and profile picture. That was workable while profile editing was scheduled for a later stage.',
         'Once a user could change a name or picture, the team had to decide what an old message should display. The original record describes two approaches: keep copies in message-related records and update them periodically, or read profile information from one user record.',
       ]),
       section('the-options', 'The tradeoff is visible in the original record', [
@@ -444,7 +449,7 @@ export const experience: Experience[] = [
   {
     role: 'Lead Developer & Founder', organization: 'AI Secretary', date: 'Aug 2024 – present',
     summary: 'Connecting job-specific AI assistance to a full-stack product implementation.',
-    details: ['Developed resume parsing and tailoring workflows in 12-week cycles.', 'Implemented PostgreSQL schema and Strapi v5 integration; initiated calls and scheduling automation.'],
+    details: ['Developed resume parsing and tailoring workflows in 12-week cycles.', 'Implemented a PostgreSQL schema and Strapi v5 integration; initiated call handling and scheduling automation.'],
   },
   {
     role: 'Team Lead / Project Coordinator', organization: 'NewU InscribeX', date: 'Mar – Jul 2024',
