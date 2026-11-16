@@ -1,5 +1,6 @@
 import type { Article, Capability, ContentImage, Experience, Project, Section, Source } from './types';
 import { rankerArticle } from './rankerArticle.ts';
+import { githubProjects } from './githubProjects.ts';
 
 // Editorial reconstruction date, not the original publication date of the source material.
 export const contentUpdatedAt = '2026-09-06';
@@ -44,6 +45,7 @@ const ocrSource = legacy('ORC and Translate.html', 'Original OCR and Translate p
 const audiobookSource = legacy('Multi-Reader-Audiobook.html', 'Original Multi-Reader Audiobook concept record');
 
 export const projects: Project[] = [
+  ...githubProjects,
   {
     slug: 'ai-resume-builder',
     title: 'AI Secretary & Resume Builder',

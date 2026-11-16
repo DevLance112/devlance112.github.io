@@ -37,7 +37,7 @@ export interface Project {
   techStack: string[];
   status: string;
   featured: boolean;
-  coverImage: ContentImage;
+  coverImage?: ContentImage;
   outcome: string;
   sections: Section[];
   relatedArticles: string[];
